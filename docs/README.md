@@ -1,7 +1,24 @@
-# nsyslog
-The next generation log agent and syslog server!
+---
+home: true
+heroImage: /assets/Solzimer-patreon.png
+heroText: nsyslog
+tagline: The next gen log agent
+actionText: Get Started →
+actionLink: /intro/install
+features:
+- title: Blazing Fast
+  details: Thanks to the powerful streams module by NodeJS, all I/O tasks are performed in non-blocking async mode. Designed for performance, both CPU and RAM usage, nsyslog has a minimal footprint.
+- title: Multi process flows
+  details: Distribute work flows across multiple CPU cores for concurrent data processing.
+- title: Modular
+  details: Extend the capabilities of nsyslog with a wide range of readers, processors and transporters.
+footer: MIT Licensed | Copyright © 2018-present Solzimer
+---
 
-![Architecture](assets/nsyslog.svg)
+# nsyslog
+The next generation log agent!
+
+![Architecture](assets/nsyslog.png)
 
 NSyslog is a modern, new generation, log agent and syslog server. It features a modular flow architecture of data collectors (inputs), processors and transporters.
 
@@ -79,6 +96,3 @@ Since all the codebase is written in NodeJS, it has a very small memory footprin
 * [Reemit](transporters/reemit.md)
 * [Syslog](transporters/syslog.md)
 * [ZeroMQ](transporters/zmq.md)
-
-
-Background logo by freepik: [https://www.freepik.es/fotos-vectores-gratis/fondo](https://www.freepik.es/fotos-vectores-gratis/fondo)
