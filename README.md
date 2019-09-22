@@ -79,3 +79,6 @@ Since all the codebase is written in NodeJS, it has a very small memory footprin
 * [Reemit](transporters/reemit.md)
 * [Syslog](transporters/syslog.md)
 * [ZeroMQ](transporters/zmq.md)
+
+
+Background logo by freepik: [https://www.freepik.es/fotos-vectores-gratis/fondo](https://www.freepik.es/fotos-vectores-gratis/fondo)
