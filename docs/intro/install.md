@@ -1,6 +1,8 @@
 # Installation
 
-#### As a CLI app
+Nsyslog can be used either as a standalone application, or embedded in your app as a regular node module
+
+## As a CLI app
 ```
 npm install -g nsyslog
 ```
@@ -20,7 +22,7 @@ Options:
   -h, --help               output usage information
 ```
 
-#### As an embedded module
+## As an embedded module
 ```
 npm install -save nsyslog
 ```

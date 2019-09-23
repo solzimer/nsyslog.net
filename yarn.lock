@@ -875,7 +875,7 @@
     markdown-it-table-of-contents "^0.4.0"
     prismjs "^1.13.0"
 
-"@vuepress/plugin-active-header-links@^1.1.0":
+"@vuepress/plugin-active-header-links@^1.0.2", "@vuepress/plugin-active-header-links@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.1.0.tgz#cd62c1712040676035f34fed16a088e1c08811d8"
   integrity sha512-sa5ySYl/kTyr1AMakeW375wWs1aQ6psiJiSFclxkGvxcuGZ89F27ELvd43DKaETAlH90LcoE/j7TXMA895qXmw==
@@ -889,7 +889,7 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-nprogress@^1.1.0":
+"@vuepress/plugin-nprogress@^1.0.2", "@vuepress/plugin-nprogress@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.1.0.tgz#ca7106adc7016ed0d90a22555066c11da597ef59"
   integrity sha512-XhUyAO+mzYFOFupX/pNlPbv0bT596Lk000Q2PhWfRliwUzpUd0/u5Z6B6fasIVj01Yqih/gAGOZpr2ZwSCNJYw==
@@ -903,7 +903,7 @@
   dependencies:
     "@vuepress/shared-utils" "^1.1.0"
 
-"@vuepress/plugin-search@^1.1.0":
+"@vuepress/plugin-search@^1.0.2", "@vuepress/plugin-search@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.1.0.tgz#3b7a344a7df1bab27f10a46e6b57680c8f5d4c7e"
   integrity sha512-GoxvcM65ZAZycnsoZJ/wx9F3hXKzzJQdS7lNnAuHrvCheT5tVO1wwMumVP/unZU/59zCQ1PiyReYntLSp5bXVg==
@@ -7086,6 +7086,19 @@ vuepress-plugin-container@^2.0.0:
   integrity sha512-SrGYYT7lkie7xlIlAVhn+9sDW42MytNCoxWL/2uDr+q9wZA4h1uYlQvfc2DVjy+FsM9PPPSslkeo/zCpYVY82g==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-theme-thindark@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-thindark/-/vuepress-theme-thindark-1.0.1.tgz#4612eb03c7cbaf34e81b7edd57219e4050dcbab7"
+  integrity sha512-+dFLOjsLlbwcrtO2bfZ3edqSN5RQ0TcI+6ChKSjUKqomBuhGzQiZKYcRk4W0tv5HPO0KhgO/ER1xrTJosSbw4A==
+  dependencies:
+    "@vuepress/plugin-active-header-links" "^1.0.2"
+    "@vuepress/plugin-nprogress" "^1.0.2"
+    "@vuepress/plugin-search" "^1.0.2"
+    docsearch.js "^2.5.2"
+    stylus "^0.54.5"
+    stylus-loader "^3.0.2"
+    vuepress-plugin-container "^2.0.0"
 
 vuepress@^1.1.0:
   version "1.1.0"
