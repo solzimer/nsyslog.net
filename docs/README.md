@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: /assets/Solzimer-patreon.png
-heroText: nsyslog
+heroImage: /assets/logo-nsyslog-tr.png
+heroText: 
 tagline: The next gen log agent
 actionText: Get Started →
 actionLink: /intro/install
