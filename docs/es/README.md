@@ -1,9 +1,9 @@
 ---
 home: true
-heroImage: /assets/Solzimer-patreon.png
-heroText: nsyslog
+heroImage: /assets/logo-nsyslog-tr.png
+heroText:
 tagline: El agente de última generación
-actionText: Get Started →
+actionText: Empieza aquí →
 actionLink: /intro/install
 features:
 - title: Asombrosamente rápido
@@ -16,26 +16,47 @@ footer: MIT Licensed | Copyright © 2018-present Solzimer
 ---
 
 # nsyslog
-The next generation log agent!
+El agente de última generación!
 
-![Architecture](assets/nsyslog.png)
+## ¿El qué?
+Un agente... Lee logs y datos de múltiples fuentes, parséalos, procésalos, fíltralos, corrélalos, y agrégalos, y, finalmente, envíalos a sus destinos. Eso es lo que hace nsyslog.
 
-NSyslog is a modern, new generation, log agent and syslog server. It features a modular flow architecture of data collectors (inputs), processors and transporters.
+Para ello, nsyslog hace uso de las más nuevas tecnologías, para conseguir un entorno de proceso rápido, eficiente, y con el menor impacto posible para la CPU y la memoria.
 
-Since all the codebase is written in NodeJS, it has a very small memory footprint and excels at data input/output. It also benefits from the excellent [streams framework](https://nodejs.org/api/stream.html) provided natively by node.
+## Principales características
+* Bajo impacto en el entorno
+* Control de flujo de datos con fuentes *pull* (activas) y *push* (pasivas)
+* Flujos multi-núcleo para proceso de datos concurrente
+* Grafos de flujos
+* Amplio catálogo de [fuentes](inputs/index.md), [procesadores](processors/index.md) y [transportes](transporters/index.md)
+* Modular y extensible con plugins
+* Compatible con el protocolo multilang de Apache Storm
 
-### Main Features
-* Small memory footprint
-* Flow control of push and pull inputs
-* On-Disk input data buffering
-* A wide core catalog [inputs](inputs/index.md), [processors](processors/index.md) and [transporters](transporters/index.md)
-* Extensible with custom inputs, processors and transporters
-* Support for Apache Storm multilang protocol
-* Multicore flows for parallel processing
+### Entonces me sirve para... (ejemplos de casos de uso)
+1. Servidor de Syslog: crea un servidor de syslog, filtra, clasifica y escribe en ficheros los logs recibidos.
+2. Migración de datos: Lectura de datos heterogéneos, parseo, normalización y escritura en base de datos (SQL, NoSQL...)
+3. Consumir / Producir mensajes: Consumir / Producir mensajes de diversos brokers (Redis, Kafka, ZeroMQ)
+4. Correlación: Recepción / lectura de datos, parseo, filtrado, agregación y correlación con motor de reglas.
+5. Todo a la vez... Sí, con nsyslog es posible hacerlo todo a la vez, ¿Con otros no? Sólo echa un vistazo a los componentes disponibles, y encontrarás tu propio caso de uso.
 
-## Quick Start
-* [Installation](intro/install.md)
-* [Basics](intro/basics.md)
+## Arquitectura
+![Architecture](../assets/nsyslog.png)
+
+nsyslog es un moderno agente de nueva generación. is a modern, new generation, log agent and syslog server. Cuenta con una arquitectura modular de flujos de recolección de datos (fuentes), proceso (procesadores) y transportes.
+
+Una fuente (input) puede ser cualquier forma de obtención de datos, desde algo tan simple como leer un fichero, a levantar un servidor REST, consultar datos de una BDD, suscribirse a un broker de mensajes, etc...
+
+Un procesador (processor) obentrá un dato de entrada, lo transformará y generará (o no), un dato (o múltiples datos) de salida. Es posible encadenar multiples procesadores en serie, y pueden ser tan simples como parsear una fecha, a tan complejos como un completo motor de correlación, o un bolt multilang de Apache Storm.
+
+Un transporte (transporter) envía el dato final a su destino (o destinos).
+
+¿Y un flujo? Un flujo es la combinación de todos estos elementos en un marco de trabajo conjunto. Puedes crear tantos flujos como quieras, comunicarlos entre sí, distribuirlos en diferentes cores de la CPU y paralelizarlos.
+
+Y todo ello funciona gracias a NodeJS y su excelente [framework nativo de streams](https://nodejs.org/api/stream.html). Con Node, todo este proceso tendrá el menor impacto posible en tu máquina (Por poner un ejemplo, nsyslog consume 30MB al arrancar... logstash 700MB... sí, sólo por arrancar el proceso).
+
+## Inicio Rápido
+* [Instalación](intro/install.md)
+* [Conceptos básicos](intro/basics.md)
 
 ## Configuration File
 * [Introduction](config/index.md)
