@@ -1,15 +1,17 @@
-# Basics
+# Conceptos básicos
 
-## What is NSyslog
-NSyslog is, in essence, a log agent: That is, a process that reads log lines from sources, applies transformations to them, and sends the resulting data to its destinations.
+## Qué es nsyslog
+nsyslog is, en esencia, un agente de logs: Esto es, un proceso que lee fuentes de logs, los parsea, transforma, procesa y reenvía a diferentes destinos.
 
-## What can be done?
-Some examples:
+Aunque esa es su principal función, la arquitectura de nsyslog permite que éste sea usado para un amplio espectro de casos de uso.
 
-* Run a syslog server that listens to UDP/TCP syslog messages and write them to disk
-* Read data from a file, parse it, generate events and store them to a database
-* Subscribe to message queues and operate over the data
-* Read Windows events and publish them to a realtime pub/sub mechanism
+## ¿Qué se puede hacer?
+Algunos ejemplos:
+
+* Levantar un servidor de Syslog que escuche bajo UCP y/o TCP, filtrar y clasificar los mensajes recibidos, y almacenarlos en disco.
+* Leer logs de un servidor HTTP (Apache, tomcat, nginx), parsear las líneas, geoposicionar IPs, agregar datos de usuario, etc... y almacenar los datos estructurados en una base de datos.
+* Suscribirse a una cola de mensajes (Kafka, redis, zmq...), recolectar eventos de seguridad y ejecutar reglas de correlación. Publicar nuevas alertas a un servicio REST.
+* Leer eventos de Windows y enviarlos a un SIEM (ArchSight, Splunk)
 
 There's many more that can be done; it depends on your use case. To achieve this level of functionality, NSyslog core architecture is described as follows
 
