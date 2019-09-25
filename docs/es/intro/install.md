@@ -2,6 +2,11 @@
 
 Nsyslog puede ser usado tanto como una aplicación 'standalone', o incluido en tu propio proyecto como un módulo de NodeJS
 
+## Requisitos
+* Sistema operativo: Windows 7 o superior, Linux o MacOS
+* NodeJS 8.x o superior
+* Es posible que sea necesario compilar algunos módulos nativos, por lo que se recomienda disponer del entorno de compilación apropiado de cada sistema: Visual Studio, gcc o XCode.
+
 ## Como una aplicación
 ```
 npm install -g nsyslog

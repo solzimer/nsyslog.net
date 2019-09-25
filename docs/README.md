@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /assets/logo-nsyslog-tr.png
-heroText: 
+heroText:
 tagline: The next gen log agent
 actionText: Get Started →
 actionLink: /intro/install
@@ -18,7 +18,7 @@ footer: MIT Licensed | Copyright © 2018-present Solzimer
 # nsyslog
 The next generation log agent!
 
-![Architecture](assets/nsyslog.png)
+![Architecture](/assets/nsyslog.png)
 
 NSyslog is a modern, new generation, log agent and syslog server. It features a modular flow architecture of data collectors (inputs), processors and transporters.
 

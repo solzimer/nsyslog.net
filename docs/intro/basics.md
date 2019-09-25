@@ -15,7 +15,7 @@ There's many more that can be done; it depends on your use case. To achieve this
 
 ## Architecture
 
-![Architecture](../assets/nsyslog.svg)
+![Architecture](/assets/nsyslog.svg)
 
 There are four basic components that run under NSyslog:
 

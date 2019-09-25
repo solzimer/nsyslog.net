@@ -40,7 +40,7 @@ Para ello, nsyslog hace uso de las más nuevas tecnologías, para conseguir un e
 5. Todo a la vez... Sí, con nsyslog es posible hacerlo todo a la vez, ¿Con otros no? Sólo echa un vistazo a los componentes disponibles, y encontrarás tu propio caso de uso.
 
 ## Arquitectura
-![Architecture](../assets/nsyslog.png)
+![Architecture](/assets/nsyslog.png)
 
 nsyslog es un moderno agente de nueva generación. is a modern, new generation, log agent and syslog server. Cuenta con una arquitectura modular de flujos de recolección de datos (fuentes), proceso (procesadores) y transportes.
 
