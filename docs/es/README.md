@@ -26,7 +26,9 @@ Para ello, nsyslog hace uso de las más nuevas tecnologías, para conseguir un e
 ## Principales características
 * Bajo impacto en el entorno
 * Control de flujo de datos con fuentes *pull* (activas) y *push* (pasivas)
-* Flujos multi-núcleo para proceso de datos concurrente
+* Proceso asíncrono no bloqueante
+* Preserva el orden de lleºgada / salida de los datos
+* Flujos multi-núcleo para proceso concurrente de datos
 * Grafos de flujos
 * Amplio catálogo de [fuentes](inputs/index.md), [procesadores](processors/index.md) y [transportes](transporters/index.md)
 * Modular y extensible con plugins

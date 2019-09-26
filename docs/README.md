@@ -18,7 +18,7 @@ footer: MIT Licensed | Copyright © 2018-present Solzimer
 # nsyslog
 The next generation log agent!
 
-![Architecture](/assets/nsyslog.png)
+![Architecture](/.vuepress/public/assets/nsyslog.png)
 
 NSyslog is a modern, new generation, log agent and syslog server. It features a modular flow architecture of data collectors (inputs), processors and transporters.
 
