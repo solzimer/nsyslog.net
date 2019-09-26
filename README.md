@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="/.vuepress/public/assets/logo-nsyslog-tr.png" alt="Logo" height="250px" style="display:block">
+	<img src="/docs/.vuepress/public/assets/logo-nsyslog-tr.png" alt="Logo" height="250px" style="display:block">
 	<i><sub>The next gen log agent!</sub></i>
 </p>
 
