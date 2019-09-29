@@ -139,4 +139,9 @@ En nsyslog, un flujo puede tener asignados tanto concurrencia como paralelismo. 
 
 **Importante: nsyslog sólo garantiza el órden de proceso de los datos dentro de una instancia del flujo. Si éste tiene paralelismo, no se garantiza que los datos procesados por una instancia mantengan su órden respecto a los datos de otra instancia, en referencia a cómo se generaron estos en las fuentes**
 
-[Back](../README.md)
+## Siguientes pasos
+* Ejemplo 1: Servidor syslog con escritura a fichero. [Ir a ejemplo](example1.md)
+* Ejemplo 2: Lectura de CSV con escritura a MongoDB. [Ir a ejemplo](example2.md)
+* [Línea de comandos](commands.md)
+* [Modo CLI](cli.md)
+* [Volver](../README.md)
