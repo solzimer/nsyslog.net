@@ -4,7 +4,7 @@ heroImage: /assets/logo-nsyslog-tr.png
 heroText:
 tagline: El agente de última generación
 actionText: Empieza aquí →
-actionLink: /intro/install
+actionLink: intro/install
 features:
 - title: Asombrosamente rápido
   details: Gracias a la potencia del módulo de streams de NodeJS, todas las tareas de E/S son ejecutadas de forma no bloqueante. Diseñado para obtener el mayor rendimiento, tanto en CPU como en RAM.
