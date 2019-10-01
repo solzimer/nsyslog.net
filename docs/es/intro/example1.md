@@ -115,6 +115,35 @@ Por último, juntamos todas las piezas en un flujo:
 ```
 El flujo define qué datos queremos leer, cómo procesarlos, y a donde enviarlos finalmente. En este caso, queremos leer específicamente los datos de la fuente *syslog_server*, procesarlos con los procesadores *parser* y *date*, y por último, escribirlos en fichero con el transporte *logger*
 
+### Expresiones
+En ciertos atributos de la configuración, se han usado textos que contienen elementos de la forma **${&lt;propiedad&gt;}**. Este tipo de elementos se denominan [Expresiones](expressions.md). Son una forma de interpolar / evaluar atributos de un dato de entrada para que el comportamiento de la configuración sea dinámico y varíe según los valores de éste.
+
+Por ejemplo, dado un dato de entrada tal que:
+```json
+{
+	"type" : "user",
+	"user" : {
+		"name" : "John",
+		"age" : 15
+	},
+	"address" : {
+		"city" : "New York"
+	}
+}
+```
+
+Y una expresión:
+```shell
+"The user ${user.name} of age ${user.age} lives in ${city}"
+```
+
+Será interpolado como:
+```shell
+"The user John of age 15 lives in New York"
+```
+
+Las expresiones pueden tomar muchas formas, incluso interpolar objetos de salida frente objetos de entrada; Son uno de los pilares básicos de nsyslog.
+
 ## Ejecución
 Podemos ejecutar nsyslog desde la línea de comandos:
 ```bash
@@ -305,8 +334,8 @@ A continuación se muestra la salida de *parser*, en la que, además de los dato
 ```
 
 ## Siguientes pasos
-* Ejemplo 2: Lectura de CSV con escritura a MongoDB. [Ir a ejemplo](example2.md)
 * [Conceptos básicos](basics.md)
+* Ejemplo 2: Lectura de CSV con escritura a MongoDB. [Ir a ejemplo](example2.md)
 * [Línea de comandos](commands.md)
 * [Modo CLI](cli.md)
 * [Volver](../README.md)
