@@ -18,13 +18,14 @@ Luego:
 Usage: nsyslog [options]
 
 Options:
-  -V, --version            output the version number
-  -f, --file [file]        Config file
-  -t, --test               Only validate config file
-  -L, --log-level [level]  Debug level
-  --cli                    Starts CLI session
-  --cli-start              Starts CLI session and flows
-  -h, --help               output usage information
+	-h, --help               output usage information
+	-V, --version            output the version number
+	-f, --file [file]        Config file
+	-t, --test               Only validate config file
+	-l, --log-file [path]    Output log file (default stdout)
+	-L, --log-level [level]  Debug level
+	--cli                    Starts CLI session
+	--cli-start              Starts CLI session and flows
 ```
 
 ## Como un módulo NodeJS
