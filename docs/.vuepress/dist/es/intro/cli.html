@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Modo CLI | nsyslog</title>
+    <meta name="description" content="El agente de la próxima generación">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.14b5162f.css" as="style"><link rel="preload" href="/assets/js/app.3dadc971.js" as="script"><link rel="preload" href="/assets/js/2.4a78ef23.js" as="script"><link rel="preload" href="/assets/js/32.05f7d422.js" as="script"><link rel="prefetch" href="/assets/js/10.a1030806.js"><link rel="prefetch" href="/assets/js/100.4604ee36.js"><link rel="prefetch" href="/assets/js/101.bfa7d807.js"><link rel="prefetch" href="/assets/js/102.72bfb1d8.js"><link rel="prefetch" href="/assets/js/103.d3894e63.js"><link rel="prefetch" href="/assets/js/104.eb9dd18b.js"><link rel="prefetch" href="/assets/js/105.2e8ecea3.js"><link rel="prefetch" href="/assets/js/106.34bf9868.js"><link rel="prefetch" href="/assets/js/107.5047defe.js"><link rel="prefetch" href="/assets/js/108.06e0fb03.js"><link rel="prefetch" href="/assets/js/109.d8dc355f.js"><link rel="prefetch" href="/assets/js/11.342faaa5.js"><link rel="prefetch" href="/assets/js/110.13cfa069.js"><link rel="prefetch" href="/assets/js/111.a3719678.js"><link rel="prefetch" href="/assets/js/112.4db6e50c.js"><link rel="prefetch" href="/assets/js/113.64288337.js"><link rel="prefetch" href="/assets/js/12.ab04944e.js"><link rel="prefetch" href="/assets/js/13.9be91c5d.js"><link rel="prefetch" href="/assets/js/14.f2b7157a.js"><link rel="prefetch" href="/assets/js/15.7bbbfdf8.js"><link rel="prefetch" href="/assets/js/16.7a95fb61.js"><link rel="prefetch" href="/assets/js/17.9b68e9bf.js"><link rel="prefetch" href="/assets/js/18.8e9f4bfe.js"><link rel="prefetch" href="/assets/js/19.a65b368d.js"><link rel="prefetch" href="/assets/js/20.643b549c.js"><link rel="prefetch" href="/assets/js/21.4e82af6f.js"><link rel="prefetch" href="/assets/js/22.06d94dc8.js"><link rel="prefetch" href="/assets/js/23.dd854d7d.js"><link rel="prefetch" href="/assets/js/24.10db893f.js"><link rel="prefetch" href="/assets/js/25.d7eb3546.js"><link rel="prefetch" href="/assets/js/26.bb31ea25.js"><link rel="prefetch" href="/assets/js/27.837b063a.js"><link rel="prefetch" href="/assets/js/28.2113e881.js"><link rel="prefetch" href="/assets/js/29.5117b4ca.js"><link rel="prefetch" href="/assets/js/3.fc63ae9e.js"><link rel="prefetch" href="/assets/js/30.bc72247f.js"><link rel="prefetch" href="/assets/js/31.6a5f3ab0.js"><link rel="prefetch" href="/assets/js/33.6a620077.js"><link rel="prefetch" href="/assets/js/34.5e6d80b5.js"><link rel="prefetch" href="/assets/js/35.ba5feb77.js"><link rel="prefetch" href="/assets/js/36.f2d88ce3.js"><link rel="prefetch" href="/assets/js/37.87075a39.js"><link rel="prefetch" href="/assets/js/38.0e6b8c30.js"><link rel="prefetch" href="/assets/js/39.fe462bf3.js"><link rel="prefetch" href="/assets/js/4.35377aac.js"><link rel="prefetch" href="/assets/js/40.6a96e611.js"><link rel="prefetch" href="/assets/js/41.65e35392.js"><link rel="prefetch" href="/assets/js/42.329d2f11.js"><link rel="prefetch" href="/assets/js/43.ba5fd6eb.js"><link rel="prefetch" href="/assets/js/44.569aab2d.js"><link rel="prefetch" href="/assets/js/45.f49dd35e.js"><link rel="prefetch" href="/assets/js/46.aa4c42d0.js"><link rel="prefetch" href="/assets/js/47.df439280.js"><link rel="prefetch" href="/assets/js/48.077bb421.js"><link rel="prefetch" href="/assets/js/49.957b9309.js"><link rel="prefetch" href="/assets/js/5.44c364b9.js"><link rel="prefetch" href="/assets/js/50.52ee7208.js"><link rel="prefetch" href="/assets/js/51.52da3ebc.js"><link rel="prefetch" href="/assets/js/52.12e92988.js"><link rel="prefetch" href="/assets/js/53.81b7e3de.js"><link rel="prefetch" href="/assets/js/54.12144f9f.js"><link rel="prefetch" href="/assets/js/55.dd3cbe41.js"><link rel="prefetch" href="/assets/js/56.440aadf2.js"><link rel="prefetch" href="/assets/js/57.eabb379c.js"><link rel="prefetch" href="/assets/js/58.3100af21.js"><link rel="prefetch" href="/assets/js/59.8e2b8242.js"><link rel="prefetch" href="/assets/js/6.91f45be6.js"><link rel="prefetch" href="/assets/js/60.90f408d3.js"><link rel="prefetch" href="/assets/js/61.b472fe8d.js"><link rel="prefetch" href="/assets/js/62.669df437.js"><link rel="prefetch" href="/assets/js/63.07fba295.js"><link rel="prefetch" href="/assets/js/64.81505291.js"><link rel="prefetch" href="/assets/js/65.411f7890.js"><link rel="prefetch" href="/assets/js/66.8b306d59.js"><link rel="prefetch" href="/assets/js/67.5590c2d2.js"><link rel="prefetch" href="/assets/js/68.8ff5d2b0.js"><link rel="prefetch" href="/assets/js/69.c020166d.js"><link rel="prefetch" href="/assets/js/7.4a830323.js"><link rel="prefetch" href="/assets/js/70.9e17f16a.js"><link rel="prefetch" href="/assets/js/71.34223fc1.js"><link rel="prefetch" href="/assets/js/72.1c1ec792.js"><link rel="prefetch" href="/assets/js/73.280dbd05.js"><link rel="prefetch" href="/assets/js/74.baa00387.js"><link rel="prefetch" href="/assets/js/75.6a0399e8.js"><link rel="prefetch" href="/assets/js/76.8ae89df5.js"><link rel="prefetch" href="/assets/js/77.fabd80e2.js"><link rel="prefetch" href="/assets/js/78.8e9bda79.js"><link rel="prefetch" href="/assets/js/79.1bd24ed9.js"><link rel="prefetch" href="/assets/js/8.d92859b7.js"><link rel="prefetch" href="/assets/js/80.d0cc2e72.js"><link rel="prefetch" href="/assets/js/81.b8917ce2.js"><link rel="prefetch" href="/assets/js/82.caa38512.js"><link rel="prefetch" href="/assets/js/83.2574d2c3.js"><link rel="prefetch" href="/assets/js/84.3244b52a.js"><link rel="prefetch" href="/assets/js/85.02e1dbd7.js"><link rel="prefetch" href="/assets/js/86.a24af241.js"><link rel="prefetch" href="/assets/js/87.07ead6b7.js"><link rel="prefetch" href="/assets/js/88.b989de02.js"><link rel="prefetch" href="/assets/js/89.bdf43c12.js"><link rel="prefetch" href="/assets/js/9.a0dd3809.js"><link rel="prefetch" href="/assets/js/90.da25cca4.js"><link rel="prefetch" href="/assets/js/91.328376e0.js"><link rel="prefetch" href="/assets/js/92.5572f521.js"><link rel="prefetch" href="/assets/js/93.40085450.js"><link rel="prefetch" href="/assets/js/94.052c852d.js"><link rel="prefetch" href="/assets/js/95.7710ec69.js"><link rel="prefetch" href="/assets/js/96.f17a1674.js"><link rel="prefetch" href="/assets/js/97.00d5fa4d.js"><link rel="prefetch" href="/assets/js/98.4d325cfd.js"><link rel="prefetch" href="/assets/js/99.8d26ca55.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.14b5162f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="inner"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/es/" class="home-link router-link-active"><!----> <span class="site-name">nsyslog</span></a> <div class="links"><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/intro/install.html" class="nav-link">About</a></div><div class="nav-item"><a href="https://github.com/solzimer/nsyslog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Download
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">en-US</a></li><li class="dropdown-item"><!----> <a href="/es/intro/cli.html" class="nav-link router-link-exact-active router-link-active">es-ES</a></li></ul></div></div> <!----></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div class="sidebar-mask"></div> <div class="docs-layout"><aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/intro/install.html" class="nav-link">About</a></div><div class="nav-item"><a href="https://github.com/solzimer/nsyslog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Download
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">en-US</a></li><li class="dropdown-item"><!----> <a href="/es/intro/cli.html" class="nav-link router-link-exact-active router-link-active">es-ES</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Modo CLI</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/es/intro/cli.html#config" class="sidebar-link">config</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#reload" class="sidebar-link">reload</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#start" class="sidebar-link">start</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#stop" class="sidebar-link">stop</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#pause" class="sidebar-link">pause</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#resume" class="sidebar-link">resume</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#stats" class="sidebar-link">stats</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/es/intro/cli.html#input-processor-transporter" class="sidebar-link">input, processor, transporter</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/es/intro/cli.html#ejemplos" class="sidebar-link">Ejemplos</a></li></ul></li><li><a href="/es/intro/cli.html#siguientes-pasos" class="sidebar-link">Siguientes pasos</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="modo-cli"><a href="#modo-cli" aria-hidden="true" class="header-anchor">#</a> Modo CLI</h1> <p>nsyslog permite ser ejecutado en el llamado <em>modo CLI</em>. En dicho modo, se activa un terminal interactivo que recibe y ejecuta comandos con el objetivo de poder depurar una determinada configuración.</p> <p>Para ejecutar nsyslog en modo CLI, basta con usar el parámetro <strong>--cli</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ nsyslog --cli -f examples/config/test033_httpserver.json
+warn: Syslog parser: Multithread is disabled
+warn: CSV parser: Multithread is disabled
+warn: XML parser: Multithread is disabled
+info: Reading configuration <span class="token function">file</span> <span class="token string">&quot;examples/config/test033_httpserver.json&quot;</span>
+info: Valid config <span class="token function">file</span>
+info: Config loaded<span class="token operator">!</span>
+info: PushStream piped to InputStream
+info: PullStream piped to InputStream
+nsyslog<span class="token operator">&gt;</span>
+</code></pre></div><p>Al ejecutarse en este modo, nsyslog no inicia los flujos automáticamente, sino que deben ser activados desde la línea de comandos. Si se desea iniciar los flujos de forma automática, se puede sustituir <strong>--cli</strong> por <strong>--cli-start</strong></p> <h3 id="comandos-disponibles"><a href="#comandos-disponibles" aria-hidden="true" class="header-anchor">#</a> Comandos disponibles</h3> <p>Una vez dentro del modo CLI, podemos ejecutar el comando <strong>help</strong> para ver el listado de comandos disponibles:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nsyslog<span class="token operator">&gt;</span> <span class="token builtin class-name">help</span>
+
+  Commands:
+
+    <span class="token builtin class-name">help</span> <span class="token punctuation">[</span>command<span class="token punctuation">..</span>.<span class="token punctuation">]</span>           Provides <span class="token builtin class-name">help</span> <span class="token keyword">for</span> a given command.
+    <span class="token builtin class-name">exit</span>                        Exits application.
+    input <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>id<span class="token operator">&gt;</span>        Prints output entries <span class="token keyword">for</span> Input Components
+    processor <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>id<span class="token operator">&gt;</span>    Prints input/acked/output entries <span class="token keyword">for</span> Processor Components
+    transporter <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>id<span class="token operator">&gt;</span>  Prints input/output <span class="token keyword">for</span> Transporter Components
+    stats <span class="token punctuation">[</span>interval<span class="token punctuation">]</span>            Prints statistics. Interval: Optional, refresh seconds
+    config                      Prints complete config <span class="token function">file</span>
+    reload                      Reload configuration
+    start                       Starts flows
+    stop                        Stop flows
+    pause                       Pause flows
+    resume                      Resume flows
+
+nsyslog<span class="token operator">&gt;</span>
+</code></pre></div><p>Algunos comandos disponen de ayuda adicional si son precedidos del comando <strong>help</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>nsyslog<span class="token operator">&gt;</span> <span class="token builtin class-name">help</span> stats
+
+  Usage: stats <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token punctuation">[</span>interval<span class="token punctuation">]</span>
+
+  Prints statistics. Interval: Optional, refresh seconds
+
+  Options:
+
+    --help  output usage information
+
+nsyslog<span class="token operator">&gt;</span>
+</code></pre></div><p>Adicionalmente, la interfaz permite el autocompletado a través de la tecla de <em>tabulador</em></p> <h2 id="config"><a href="#config" aria-hidden="true" class="header-anchor">#</a> config</h2> <p>El comando <strong>config</strong> permite imprimir toda la configuración aplicada a nsyslog, incluyendo cualquier fichero secundario referenciado en ésta (de forma recursiva).</p> <p>La información impresa no tiene por qué coincidir exáctamente con el contenido del fichero original, sino que es una representación de éste una vez procesado y combinado con el resto de ficheros referenciados.</p> <h2 id="reload"><a href="#reload" aria-hidden="true" class="header-anchor">#</a> reload</h2> <p>Permite la recarga de la configuración en caso de que ésta haya sido modificada. Al ejecutar el comando <strong>reload</strong>, si los flujos se estuvieran ejecutando, estos serán detenidos antes de efecutar la recarga.</p> <h2 id="start"><a href="#start" aria-hidden="true" class="header-anchor">#</a> start</h2> <p>Inicia la ejecución de los flujos, iniciando todos los componentes implicados (fuentes, procesadores y transportes)</p> <h2 id="stop"><a href="#stop" aria-hidden="true" class="header-anchor">#</a> stop</h2> <p>Detiene por completo la ejecución de los flujos, y con ello las fuentes, procesadores y transportes implicados.</p> <h2 id="pause"><a href="#pause" aria-hidden="true" class="header-anchor">#</a> pause</h2> <p>Pausa temporalmente las fuentes, de forma que no entren más datos de entrada en los flujos.</p> <h2 id="resume"><a href="#resume" aria-hidden="true" class="header-anchor">#</a> resume</h2> <p>Reanuda las fuentes previamente pausadas.</p> <h2 id="stats"><a href="#stats" aria-hidden="true" class="header-anchor">#</a> stats</h2> <p>Imprime un resumen estadístico del uso de cada componente en los flujos. Es posible añadir un parámetro numérico que servirá de intervalo (en segundos) sobre el que se seguirá imprimiendo la información, hasta que se pulse la letra <strong>Q</strong></p> <p>En el siguiente ejemplo, indicamos que queremos ver las estadísticas cada 5 segundos. Al pulsar <strong>Q</strong>, cancelaremos el comando:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nsyslog<span class="token operator">&gt;</span> stats <span class="token number">5</span>
+
+********* Press Q to cancel *********
+
+
+stats <span class="token punctuation">{</span>
+  <span class="token string">&quot;input&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;http&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http&quot;</span>,
+      <span class="token string">&quot;ack&quot;</span><span class="token builtin class-name">:</span> <span class="token number">0</span>,
+      <span class="token string">&quot;fail&quot;</span><span class="token builtin class-name">:</span> <span class="token number">0</span>,
+      <span class="token string">&quot;emit&quot;</span><span class="token builtin class-name">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;processor&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>,
+  <span class="token string">&quot;transporter&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;logger&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;logger&quot;</span>,
+      <span class="token string">&quot;ack&quot;</span><span class="token builtin class-name">:</span> <span class="token number">1</span>,
+      <span class="token string">&quot;fail&quot;</span><span class="token builtin class-name">:</span> <span class="token number">0</span>,
+      <span class="token string">&quot;emit&quot;</span><span class="token builtin class-name">:</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+nsyslog<span class="token operator">&gt;</span>
+stats <span class="token punctuation">{</span>
+  <span class="token string">&quot;input&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;http&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http&quot;</span>,
+      <span class="token string">&quot;ack&quot;</span><span class="token builtin class-name">:</span> <span class="token number">0</span>,
+      <span class="token string">&quot;fail&quot;</span><span class="token builtin class-name">:</span> <span class="token number">0</span>,
+      <span class="token string">&quot;emit&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;processor&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>,
+  <span class="token string">&quot;transporter&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;logger&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;logger&quot;</span>,
+      <span class="token string">&quot;ack&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2</span>,
+      <span class="token string">&quot;fail&quot;</span><span class="token builtin class-name">:</span> <span class="token number">0</span>,
+      <span class="token string">&quot;emit&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+nsyslog<span class="token operator">&gt;</span>
+************* Cancelled *************
+
+
+nsyslog<span class="token operator">&gt;</span>
+
+</code></pre></div><h2 id="input-processor-transporter"><a href="#input-processor-transporter" aria-hidden="true" class="header-anchor">#</a> input, processor, transporter</h2> <p>Estos comandos permiten mostrar lo que ocurre cuando un dato entra / sale de un componente:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nsyslog<span class="token operator">&gt;</span> processor --help
+
+  Missing required argument. Showing Help:
+
+  Usage: processor <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>id<span class="token operator">&gt;</span>
+
+  Prints input/acked/output entries <span class="token keyword">for</span> Processor Components
+
+  Options:
+
+    --help     output usage information
+    -i, --in   Shows input entries
+    -o, --out  Shows output entries <span class="token operator">&lt;</span>default<span class="token operator">&gt;</span>
+    -a, --ack  Shows acked entries
+
+nsyslog<span class="token operator">&gt;</span>
+</code></pre></div><p>Estos comandos resultan especialmente útiles para depurar lo que ocurre con un dato cuando entra en un componente, y cómo es transformado a la salida.</p> <h3 id="ejemplos"><a href="#ejemplos" aria-hidden="true" class="header-anchor">#</a> Ejemplos</h3> <p>Mostrar los datos generados por una fuente:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nsyslog<span class="token operator">&gt;</span> input http
+
+********* Press Q to cancel *********
+
+
+InputStream - http - output: <span class="token punctuation">{</span>
+  <span class="token string">&quot;timestamp&quot;</span><span class="token builtin class-name">:</span> <span class="token number">1570213516886</span>,
+  <span class="token string">&quot;server&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;format&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;json&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;8888&quot;</span>,
+    <span class="token string">&quot;host&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;0.0.0.0&quot;</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;client&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;address&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;127.0.0.1&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token number">61276</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;originalMessage&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;user&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;John Doe&quot;</span>,
+    <span class="token string">&quot;ip_addr&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;10.23.123.34&quot;</span>,
+    <span class="token string">&quot;dst_port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;8080&quot;</span>,
+    <span class="token string">&quot;url&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http://myserver.com&quot;</span>,
+    <span class="token string">&quot;status_code&quot;</span><span class="token builtin class-name">:</span> <span class="token number">404</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;input&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http&quot;</span>,
+  <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;httpserver&quot;</span>,
+  <span class="token string">&quot;<span class="token variable">$key</span>&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http@httpserver&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Mostrar la entrada / salida de un procesador:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nsyslog<span class="token operator">&gt;</span> processor props -i
+
+********* Press Q to cancel *********
+
+
+nsyslog<span class="token operator">&gt;</span> processor props -o
+
+********* Press Q to cancel *********
+
+
+nsyslog<span class="token operator">&gt;</span> start
+info: Server <span class="token builtin class-name">bind</span> <span class="token keyword">for</span> process <span class="token number">68377</span> <span class="token assign-left variable">pid</span><span class="token operator">=</span><span class="token number">68377</span>, <span class="token assign-left variable">host</span><span class="token operator">=</span>/tmp/nsyslog_68377, <span class="token assign-left variable">host</span><span class="token operator">=</span><span class="token number">0.0</span>.0.0, <span class="token assign-left variable">port</span><span class="token operator">=</span><span class="token number">62724</span>
+info: Init_0 piped to props
+info: props piped to End_1
+info: Null_2 piped to logger
+info: logger piped to End_3
+info: Flow_0_Entry_Point piped to Init_0
+info: props piped to Null_2
+info: InputStream piped to Flow_0_Entry_Point
+info: Process <span class="token number">68377</span> registers flows: <span class="token assign-left variable">0</span><span class="token operator">=</span>Flow_0
+info: All modules started successfuly
+
+********* Press Q to cancel *********
+
+
+
+********* Press Q to cancel *********
+
+
+nsyslog<span class="token operator">&gt;</span>
+processors - props - input: <span class="token punctuation">{</span>
+  <span class="token string">&quot;timestamp&quot;</span><span class="token builtin class-name">:</span> <span class="token number">1570213786804</span>,
+  <span class="token string">&quot;server&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;format&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;json&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;8888&quot;</span>,
+    <span class="token string">&quot;host&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;0.0.0.0&quot;</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;client&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;address&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;127.0.0.1&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token number">62754</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;originalMessage&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;user&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;John Doe&quot;</span>,
+    <span class="token string">&quot;ip_addr&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;10.23.123.34&quot;</span>,
+    <span class="token string">&quot;dst_port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;8080&quot;</span>,
+    <span class="token string">&quot;url&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http://myserver.com&quot;</span>,
+    <span class="token string">&quot;status_code&quot;</span><span class="token builtin class-name">:</span> <span class="token number">404</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;input&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http&quot;</span>,
+  <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;httpserver&quot;</span>,
+  <span class="token string">&quot;<span class="token variable">$key</span>&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http@httpserver&quot;</span>
+<span class="token punctuation">}</span>
+processors - props - output: <span class="token punctuation">{</span>
+  <span class="token string">&quot;timestamp&quot;</span><span class="token builtin class-name">:</span> <span class="token number">1570213786804</span>,
+  <span class="token string">&quot;server&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;format&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;json&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;8888&quot;</span>,
+    <span class="token string">&quot;host&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;0.0.0.0&quot;</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;client&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;address&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;127.0.0.1&quot;</span>,
+    <span class="token string">&quot;port&quot;</span><span class="token builtin class-name">:</span> <span class="token number">62754</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;originalMessage&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;user&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;John Doe&quot;</span>,
+    <span class="token string">&quot;ip_addr&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;10.23.123.34&quot;</span>,
+    <span class="token string">&quot;dst_port&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;8080&quot;</span>,
+    <span class="token string">&quot;url&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http://myserver.com&quot;</span>,
+    <span class="token string">&quot;status_code&quot;</span><span class="token builtin class-name">:</span> <span class="token number">404</span>
+  <span class="token punctuation">}</span>,
+  <span class="token string">&quot;input&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http&quot;</span>,
+  <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;httpserver&quot;</span>,
+  <span class="token string">&quot;<span class="token variable">$key</span>&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;http@httpserver&quot;</span>,
+  <span class="token string">&quot;message&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;User John Doe has stablished connection to 10.23.123.34:8080&quot;</span>
+<span class="token punctuation">}</span>
+nsyslog<span class="token operator">&gt;</span>
+
+</code></pre></div><h2 id="siguientes-pasos"><a href="#siguientes-pasos" aria-hidden="true" class="header-anchor">#</a> Siguientes pasos</h2> <ul><li><a href="/es/intro/install.html">Instalación</a></li> <li><a href="/es/intro/basics.html">Conceptos básicos</a></li> <li>Ejemplo 1: Servidor syslog con escritura a fichero. <a href="/es/intro/example1.html">Ir a ejemplo</a></li> <li>Ejemplo 2: Lectura de CSV con escritura a MongoDB. <a href="/es/intro/example2.html">Ir a ejemplo</a></li> <li><a href="/es/intro/commands.html">Línea de comandos</a></li> <li><a href="/es/intro/cli.html" class="router-link-exact-active router-link-active">Modo CLI</a></li> <li><a href="/es/intro/expressions.html">Expresiones</a></li> <li><a href="/es/" class="router-link-active">Volver</a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3dadc971.js" defer></script><script src="/assets/js/2.4a78ef23.js" defer></script><script src="/assets/js/32.05f7d422.js" defer></script>
+  </body>
+</html>
