@@ -138,13 +138,3 @@ La distinción entre estos dos términos suele variar y puede ser "controvertida
 En nsyslog, un flujo puede tener asignados tanto concurrencia como paralelismo. Si la concurrencia está activada, significa que el flujo se podrá ejecutar en un proceso distinto al principal. Si, además, se activa el paralelismo, dicho flujo podrá tener múltiples instancias en diferentes procesos.
 
 **Importante: nsyslog sólo garantiza el órden de proceso de los datos dentro de una instancia del flujo. Si éste tiene paralelismo, no se garantiza que los datos procesados por una instancia mantengan su órden respecto a los datos de otra instancia, en referencia a cómo se generaron estos en las fuentes**
-
-## Siguientes pasos
-* [Instalación](install.md)
-* [Conceptos básicos](basics.md)
-* Ejemplo 1: Servidor syslog con escritura a fichero. [Ir a ejemplo](example1.md)
-* Ejemplo 2: Lectura de CSV con escritura a MongoDB. [Ir a ejemplo](example2.md)
-* [Línea de comandos](commands.md)
-* [Modo CLI](cli.md)
-* [Expresiones](expressions.md)
-* [Volver](../README.md)

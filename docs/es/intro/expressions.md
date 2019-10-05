@@ -199,13 +199,3 @@ Ejemplos:
 
 ## Más sobre expresiones
 Puedes obtener más información sobre las expresiones visitando los proyectos [jsepxr](https://www.npmjs.com/package/jsexpr) y [Mingo](https://www.npmjs.com/package/mingo), así como todos los ejemplos de configuración de nsyslog en [github](https://github.com/solzimer/nsyslog/tree/master/examples/config)
-
-## Siguientes pasos
-* [Instalación](install.md)
-* [Conceptos básicos](basics.md)
-* Ejemplo 1: Servidor syslog con escritura a fichero. [Ir a ejemplo](example1.md)
-* Ejemplo 2: Lectura de CSV con escritura a MongoDB. [Ir a ejemplo](example2.md)
-* [Línea de comandos](commands.md)
-* [Modo CLI](cli.md)
-* [Expresiones](expressions.md)
-* [Volver](../README.md)

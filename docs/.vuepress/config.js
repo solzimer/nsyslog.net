@@ -1,7 +1,8 @@
 module.exports = {
 	theme: 'thindark',
 	plugins: [
-    ['@dovyp/vuepress-plugin-clipboard-copy', true]
+    ['@dovyp/vuepress-plugin-clipboard-copy', true],
+		['@vuepress/back-to-top', true],
 	],
 	locales: {
 		'/': {
@@ -17,10 +18,16 @@ module.exports = {
 	},
 
   themeConfig: {
-    sidebar: 'auto',
+    sidebar: {
+			'/es/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
+		},
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'About', link: '/intro/install' },
+      { text: 'Start', link: '/intro/install' },
+			{ text: 'Docs', items: [
+					{text:'Introduction', link: '/intro/basics'},
+					{text:'Configuration', link: '/config/basic'}
+				]
+			},
       { text: 'Download', link: 'https://github.com/solzimer/nsyslog' }
     ]
   }
