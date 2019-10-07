@@ -1,73 +1,44 @@
+# Configuración
+nsyslog se configura a través de un fichero en formato JSON. Por convención, solemos denominar a este fichero como **logagent.json**. La estructura básica de dicho fichero es:
+
 ```javascript
 {
-	// General parameters
-	"config" : {
-		"datadir" : "/tmp/nsyslog",		// Path to store buffers
-		"input" : {"buffer" : 1000},
-		"process" : {"buffer": 1000}
-	},
+	// Optional. You can include whatever JSON file that will be merged
+	// with the main file
+	"include" : [
+		// List of JSON files
+	],
+
+	// Optional. Global values to use in config expressions
+	"properties" : {},
+
+	// Optional. Overrides global configurations
+	"config" : {},
+
+	// Filter definitions. (optional)
+	"filters" : {},
+
+	// Filter groups (optional)
+	"filterGroups" : {},
 
 	// Input declarations
-	"inputs" : {
-		// This is the ID / Reference of the input
-		"file" : {
-			"type" : "file",	// Input type
-
-			// Configuration for this input instance
-			"config" : {
-				"path" : "/var/log/**/*.log",
-				"watch" : true,
-				"readmode" : "offset",
-				"offset" : "start"
-			}
-		},
-		"syslog" : {
-			"type" : "syslog",
-			"config" : {
-				"url" : "tcp://localhost:1514",
-				"tls" : {
-					"key" : "./config/server.key",
-					"cert" : "./config/server.crt"
-				}
-			}
-		}
-	},
+	"inputs" : {},
 
 	// Processor declarations
-	"processors" : {
-		"timestamp" : {
-			"type" : "timestamp",
-			"config" : {}
-		}
-	},
+	"processors" : {},
+
+	// Processor groups (Optional)
+	"processorGroups" : {},
 
 	// Transporter declarations
-	"transporters" : {
-		"syslog" : {
-			"type" : "syslog",
-			"config" : {
-				"url" : "udp://localhost:514",
-				"format" : "${originalMessage}",
-				"application" : "${filename}",
-				"hostname" : "localhost",
-				"level" : "info",
-				"facility" : 5,
-				"stream" : true,
-				"tls" : {
-					"key" : "./config/server.key",
-					"cert" : "./config/server.crt"
-				}
-			}
-		},
-		"null" : {
-			"type" : "null"
-		}
-	},
+	"transporters" : {},
 
-	// Flow declarations
+	// Transporter groups (optional)
+	"transporterGroups" : {}
+
+	// Flows
 	"flows" : [
-		{"from":"${input}=='file'", "processors":["timestamp"], "transporters":["syslog"], "mode":"parallel"}
+		// List of flow objects
 	]
 }
-
 ```

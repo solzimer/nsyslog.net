@@ -13,13 +13,16 @@ module.exports = {
 		'/es/': {
 			lang: 'es-ES',
 			title: 'nsyslog',
-			description: 'El agente de la próxima generación'
+			description: 'El agente de la próxima generación',
+
 		}
 	},
 
   themeConfig: {
+		label : "English",
     sidebar: {
-			'/es/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
+			'/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
+			'/config/' : ['basic','include'],
 		},
     nav: [
       { text: 'Start', link: '/intro/install' },
@@ -29,6 +32,29 @@ module.exports = {
 				]
 			},
       { text: 'Download', link: 'https://github.com/solzimer/nsyslog' }
-    ]
+    ],
+
+		locales : {
+			'/' : { label: 'English' },
+			'/es/' : {
+				label : "Español",
+				sidebar: {
+					'/es/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
+					'/es/config/' : ['basic','include'],
+				},
+				nav : [
+		      { text: 'Inicio', link: '/es/intro/install' },
+					{ text: 'Docs', items: [
+							{text:'Introducción', link: '/es/intro/basics'},
+							{text:'Configuración', link: '/es/config/basic'},
+							{text:'Fuentes', link: '/es/inputs/index'},
+							{text:'Procesadores', link: '/es/processors/index'},
+							{text:'Transportes', link: '/es/transporters/index'},
+						]
+					},
+		      { text: 'Descarga', link: 'https://github.com/solzimer/nsyslog' }
+		    ]
+			}
+		}
   }
 }
