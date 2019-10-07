@@ -23,7 +23,6 @@
   "homepage": "https://github.com/solzimer/nsyslog.net#readme",
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
-    "@tensorflow/tfjs-converter": "^1.2.10",
     "express": "^4.17.1",
     "vuepress-theme-thindark": "^1.0.1"
   },
