@@ -1,5 +1,5 @@
 module.exports = {
-	//theme: 'thindark',
+	theme: 'thindark',
 	plugins: [
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
 		['@vuepress/back-to-top', true],
