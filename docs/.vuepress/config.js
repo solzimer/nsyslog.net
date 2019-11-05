@@ -3,6 +3,7 @@ module.exports = {
 	plugins: [
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
 		['@vuepress/back-to-top', true],
+		require('./plugins/apidocs')
 	],
 	locales: {
 		'/': {
@@ -31,6 +32,7 @@ module.exports = {
 					{text:'Configuration', link: '/config/basic'}
 				]
 			},
+			{ text: 'API docs', type:'external', link:"/jsdoc/index.html", target:"_blank", rel:"jsdocs"},
       { text: 'Download', link: 'https://github.com/solzimer/nsyslog' }
     ],
 
