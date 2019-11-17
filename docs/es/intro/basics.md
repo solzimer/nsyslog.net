@@ -106,7 +106,7 @@ readMyFile();
 ```
 
 En un lenguaje síncrono, al llamar a la función *readMyFile*, el resultado sería:
-```text
+```
 Start reading file
 File data: .......
 Function end
@@ -114,7 +114,7 @@ Function end
 
 Sin embargo, en NodeJS, la funcion "*fs.readFile*" es asíncrona, lo que significa que, internamente, un hilo en segundo plano se encargará de la lectura del fichero, haciendo que la ejecución de "*readMyFile*" siga su curso, y, una vez finalizada esta, cuando *fs.readFile* se haya completado, generará un evento que provoque la ejecución de *printFile*, por lo que el resultado será:
 
-```text
+```
 Start reading file
 Funcion end
 File data: .......
