@@ -54,6 +54,7 @@ module.exports = {
 							{text:'Transportes', link: '/es/transporters/index'},
 						]
 					},
+					{ text: 'API docs', type:'external', link:"/jsdoc/index.html", target:"_blank", rel:"jsdocs"},
 		      { text: 'Descarga', link: 'https://github.com/solzimer/nsyslog' }
 		    ]
 			}

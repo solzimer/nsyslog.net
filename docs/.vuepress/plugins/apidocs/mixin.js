@@ -2,7 +2,7 @@
 export default {
   created () {},
   mounted () {
-		setTimeout(()=>{
+		setInterval(()=>{
 			let link = document.querySelector("a[href='/jsdoc/index.html']");
 			if(link!=null) {
 				let a = document.createElement("a");

@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Class: Semaphore</title>
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    
+    
+    <script>
+    var config = {"monospaceLinks":false,"cleverLinks":false,"default":{}};
+    </script>
+    
+
+    
+</head>
+<body>
+<div id="wrap" class="clearfix">
+    
+<div class="navigation">
+    <h3 class="applicationName"><a href="index.html"></a></h3>
+    <button id="menuToggle" class="btn btn-link btn-lg menu-toggle">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+    <div class="search">
+        <input id="search" type="text" class="form-control input-md" placeholder="Search...">
+    </div>
+    <ul class="list">
+    
+        <li class="item" data-name="Constants">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="Constants.html">Constants</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Constants.FILTER_ACTION"><a href="Constants.html#.FILTER_ACTION">FILTER_ACTION</a></li>
+            
+                <li class="parent " data-name="Constants.MODULE_TYPES"><a href="Constants.html#.MODULE_TYPES">MODULE_TYPES</a></li>
+            
+                <li class="parent " data-name="Constants.PROC_MODE"><a href="Constants.html#.PROC_MODE">PROC_MODE</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Factory">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="Factory.html">Factory</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Factory.transform"><a href="Factory.html#.transform">transform</a></li>
+            
+                <li class="parent  " data-name="Factory.writer"><a href="Factory.html#.writer">writer</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="NSyslog.Core">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="NSyslog.Core.html">NSyslog.Core</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="NSyslog.Core.Config"><a href="NSyslog.Core.html#.Config">Config</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Factory"><a href="NSyslog.Core.html#.Factory">Factory</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Input"><a href="NSyslog.Core.html#.Input">Input</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.InputWrapper"><a href="NSyslog.Core.html#.InputWrapper">InputWrapper</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Processor"><a href="NSyslog.Core.html#.Processor">Processor</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Shm"><a href="NSyslog.Core.html#.Shm">Shm</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Stats"><a href="NSyslog.Core.html#.Stats">Stats</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Streams"><a href="NSyslog.Core.html#.Streams">Streams</a></li>
+            
+                <li class="parent " data-name="NSyslog.Core.Transporter"><a href="NSyslog.Core.html#.Transporter">Transporter</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Reemiter">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="Reemiter.html">Reemiter</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Reemiter.configure"><a href="Reemiter.html#.configure">configure</a></li>
+            
+                <li class="parent  " data-name="Reemiter.write"><a href="Reemiter.html#.write">write</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Streams">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="Streams.html">Streams</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="TLS">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="TLS.html">TLS</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="TLS.DEFAULT"><a href="TLS.html#.DEFAULT">DEFAULT</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="TLS.configure"><a href="TLS.html#.configure">configure</a></li>
+            
+                <li class="parent  " data-name="TLS.defaults"><a href="TLS.html#.defaults">defaults</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Watermark">
+            <span class="title namespace ">
+                
+                <span class="namespaceTag">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                </span>
+                
+                <a href="Watermark.html">Watermark</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Component">
+            <span class="title  ">
+                
+                <a href="Component.html">Component</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Component.Events"><a href="Component.html#.Events">Events</a></li>
+            
+                <li class="parent " data-name="Component#$def"><a href="Component.html#$def">$def</a></li>
+            
+                <li class="parent " data-name="Component#id"><a href="Component.html#id">id</a></li>
+            
+                <li class="parent " data-name="Component#own"><a href="Component.html#own">own</a></li>
+            
+                <li class="parent " data-name="Component#streams"><a href="Component.html#streams">streams</a></li>
+            
+                <li class="parent " data-name="Component#type"><a href="Component.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Component.handlePipe"><a href="Component.html#.handlePipe">handlePipe</a></li>
+            
+                <li class="parent  " data-name="Component.nextSeq"><a href="Component.html#.nextSeq">nextSeq</a></li>
+            
+                <li class="parent  " data-name="Component#configure"><a href="Component.html#configure">configure</a></li>
+            
+                <li class="parent  " data-name="Component#key"><a href="Component.html#key">key</a></li>
+            
+                <li class="parent  " data-name="Component#pause"><a href="Component.html#pause">pause</a></li>
+            
+                <li class="parent  " data-name="Component#resume"><a href="Component.html#resume">resume</a></li>
+            
+                <li class="parent  " data-name="Component#start"><a href="Component.html#start">start</a></li>
+            
+                <li class="parent  " data-name="Component#stop"><a href="Component.html#stop">stop</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Config">
+            <span class="title  ">
+                
+                <a href="Config.html">Config</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Config.ERR_CATS"><a href="Config.html#.ERR_CATS">ERR_CATS</a></li>
+            
+                <li class="parent " data-name="Config.MASTER_PROC"><a href="Config.html#.MASTER_PROC">MASTER_PROC</a></li>
+            
+                <li class="parent " data-name="Config#$$errors"><a href="Config.html#$$errors">$$errors</a></li>
+            
+                <li class="parent " data-name="Config#$$raw"><a href="Config.html#$$raw">$$raw</a></li>
+            
+                <li class="parent " data-name="Config#$datadir"><a href="Config.html#$datadir">$datadir</a></li>
+            
+                <li class="parent " data-name="Config#$file"><a href="Config.html#$file">$file</a></li>
+            
+                <li class="parent " data-name="Config#$filepath"><a href="Config.html#$filepath">$filepath</a></li>
+            
+                <li class="parent " data-name="Config#$path"><a href="Config.html#$path">$path</a></li>
+            
+                <li class="parent " data-name="Config#flows"><a href="Config.html#flows">flows</a></li>
+            
+                <li class="parent " data-name="Config#inputs"><a href="Config.html#inputs">inputs</a></li>
+            
+                <li class="parent " data-name="Config#modules"><a href="Config.html#modules">modules</a></li>
+            
+                <li class="parent " data-name="Config#processors"><a href="Config.html#processors">processors</a></li>
+            
+                <li class="parent " data-name="Config#transporters"><a href="Config.html#transporters">transporters</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Config.read"><a href="Config.html#.read">read</a></li>
+            
+                <li class="parent  " data-name="Config#split"><a href="Config.html#split">split</a></li>
+            
+                <li class="parent  " data-name="Config#toJSON"><a href="Config.html#toJSON">toJSON</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Config.Flow">
+            <span class="title  ">
+                
+                <a href="Config.Flow.html">Config.Flow</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Config.Flow#disabled"><a href="Config.Flow.html#disabled">disabled</a></li>
+            
+                <li class="parent " data-name="Config.Flow#fork"><a href="Config.Flow.html#fork">fork</a></li>
+            
+                <li class="parent " data-name="Config.Flow#fparent"><a href="Config.Flow.html#fparent">fparent</a></li>
+            
+                <li class="parent " data-name="Config.Flow#from"><a href="Config.Flow.html#from">from</a></li>
+            
+                <li class="parent " data-name="Config.Flow#id"><a href="Config.Flow.html#id">id</a></li>
+            
+                <li class="parent " data-name="Config.Flow#processors"><a href="Config.Flow.html#processors">processors</a></li>
+            
+                <li class="parent " data-name="Config.Flow#pstream"><a href="Config.Flow.html#pstream">pstream</a></li>
+            
+                <li class="parent " data-name="Config.Flow#transporters"><a href="Config.Flow.html#transporters">transporters</a></li>
+            
+                <li class="parent " data-name="Config.Flow#virtual"><a href="Config.Flow.html#virtual">virtual</a></li>
+            
+                <li class="parent " data-name="Config.Flow#when"><a href="Config.Flow.html#when">when</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Config.Inputs">
+            <span class="title  ">
+                
+                <a href="Config.Inputs.html">Config.Inputs</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Config.Inputs.instance"><a href="Config.Inputs.html#.instance">instance</a></li>
+            
+                <li class="parent  " data-name="Config.Inputs.Null"><a href="Config.Inputs.html#.Null">Null</a></li>
+            
+                <li class="parent  " data-name="Config.Inputs.register"><a href="Config.Inputs.html#.register">register</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Config.Processors">
+            <span class="title  ">
+                
+                <a href="Config.Processors.html">Config.Processors</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Config.Processors.End"><a href="Config.Processors.html#.End">End</a></li>
+            
+                <li class="parent  " data-name="Config.Processors.get"><a href="Config.Processors.html#.get">get</a></li>
+            
+                <li class="parent  " data-name="Config.Processors.Init"><a href="Config.Processors.html#.Init">Init</a></li>
+            
+                <li class="parent  " data-name="Config.Processors.instance"><a href="Config.Processors.html#.instance">instance</a></li>
+            
+                <li class="parent  " data-name="Config.Processors.Null"><a href="Config.Processors.html#.Null">Null</a></li>
+            
+                <li class="parent  " data-name="Config.Processors.register"><a href="Config.Processors.html#.register">register</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Config.Transporters">
+            <span class="title  ">
+                
+                <a href="Config.Transporters.html">Config.Transporters</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Config.Transporters.End"><a href="Config.Transporters.html#.End">End</a></li>
+            
+                <li class="parent  " data-name="Config.Transporters.get"><a href="Config.Transporters.html#.get">get</a></li>
+            
+                <li class="parent  " data-name="Config.Transporters.instance"><a href="Config.Transporters.html#.instance">instance</a></li>
+            
+                <li class="parent  " data-name="Config.Transporters.Null"><a href="Config.Transporters.html#.Null">Null</a></li>
+            
+                <li class="parent  " data-name="Config.Transporters.register"><a href="Config.Transporters.html#.register">register</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="ElasticTransporter">
+            <span class="title  ">
+                
+                <a href="ElasticTransporter.html">ElasticTransporter</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class=" " data-name="ElasticTransporter#$def"><a href="ElasticTransporter.html#$def">$def</a></li>
+            
+                <li class=" " data-name="ElasticTransporter#id"><a href="ElasticTransporter.html#id">id</a></li>
+            
+                <li class=" " data-name="ElasticTransporter#own"><a href="ElasticTransporter.html#own">own</a></li>
+            
+                <li class=" " data-name="ElasticTransporter#streams"><a href="ElasticTransporter.html#streams">streams</a></li>
+            
+                <li class=" " data-name="ElasticTransporter#type"><a href="ElasticTransporter.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="ElasticTransporter#configure"><a href="ElasticTransporter.html#configure">configure</a></li>
+            
+                <li class="  " data-name="ElasticTransporter#key"><a href="ElasticTransporter.html#key">key</a></li>
+            
+                <li class="  " data-name="ElasticTransporter#pause"><a href="ElasticTransporter.html#pause">pause</a></li>
+            
+                <li class="  " data-name="ElasticTransporter#resume"><a href="ElasticTransporter.html#resume">resume</a></li>
+            
+                <li class="  " data-name="ElasticTransporter#start"><a href="ElasticTransporter.html#start">start</a></li>
+            
+                <li class="  " data-name="ElasticTransporter#stop"><a href="ElasticTransporter.html#stop">stop</a></li>
+            
+                <li class="  " data-name="ElasticTransporter#transport"><a href="ElasticTransporter.html#transport">transport</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Factory.ExtendedDuplex">
+            <span class="title  ">
+                
+                <a href="Factory.ExtendedDuplex.html">Factory.ExtendedDuplex</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Factory.ExtendedDuplex#flow"><a href="Factory.ExtendedDuplex.html#flow">flow</a></li>
+            
+                <li class="parent " data-name="Factory.ExtendedDuplex#instance"><a href="Factory.ExtendedDuplex.html#instance">instance</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Factory.ExtendedDuplex#subscribe"><a href="Factory.ExtendedDuplex.html#subscribe">subscribe</a></li>
+            
+                <li class="parent  " data-name="Factory.ExtendedDuplex#unsubscribe"><a href="Factory.ExtendedDuplex.html#unsubscribe">unsubscribe</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Input">
+            <span class="title  ">
+                
+                <a href="Input.html">Input</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Input.MODE"><a href="Input.html#.MODE">MODE</a></li>
+            
+                <li class=" " data-name="Input#$def"><a href="Input.html#$def">$def</a></li>
+            
+                <li class=" " data-name="Input#id"><a href="Input.html#id">id</a></li>
+            
+                <li class="parent " data-name="Input#mode"><a href="Input.html#mode">mode</a></li>
+            
+                <li class=" " data-name="Input#own"><a href="Input.html#own">own</a></li>
+            
+                <li class=" " data-name="Input#streams"><a href="Input.html#streams">streams</a></li>
+            
+                <li class=" " data-name="Input#type"><a href="Input.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="Input#configure"><a href="Input.html#configure">configure</a></li>
+            
+                <li class="  " data-name="Input#key"><a href="Input.html#key">key</a></li>
+            
+                <li class="parent  " data-name="Input#next"><a href="Input.html#next">next</a></li>
+            
+                <li class="  " data-name="Input#pause"><a href="Input.html#pause">pause</a></li>
+            
+                <li class="  " data-name="Input#resume"><a href="Input.html#resume">resume</a></li>
+            
+                <li class="parent  " data-name="Input#start"><a href="Input.html#start">start</a></li>
+            
+                <li class="  " data-name="Input#stop"><a href="Input.html#stop">stop</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="InputWrapper">
+            <span class="title  ">
+                
+                <a href="InputWrapper.html">InputWrapper</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class=" " data-name="InputWrapper#$def"><a href="InputWrapper.html#$def">$def</a></li>
+            
+                <li class=" " data-name="InputWrapper#id"><a href="InputWrapper.html#id">id</a></li>
+            
+                <li class="parent " data-name="InputWrapper#input"><a href="InputWrapper.html#input">input</a></li>
+            
+                <li class="parent " data-name="InputWrapper#instance"><a href="InputWrapper.html#instance">instance</a></li>
+            
+                <li class=" " data-name="InputWrapper#mode"><a href="InputWrapper.html#mode">mode</a></li>
+            
+                <li class=" " data-name="InputWrapper#own"><a href="InputWrapper.html#own">own</a></li>
+            
+                <li class="parent " data-name="InputWrapper#queueStream"><a href="InputWrapper.html#queueStream">queueStream</a></li>
+            
+                <li class="parent " data-name="InputWrapper#stream"><a href="InputWrapper.html#stream">stream</a></li>
+            
+                <li class=" " data-name="InputWrapper#streams"><a href="InputWrapper.html#streams">streams</a></li>
+            
+                <li class=" " data-name="InputWrapper#type"><a href="InputWrapper.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="InputWrapper#configure"><a href="InputWrapper.html#configure">configure</a></li>
+            
+                <li class="  " data-name="InputWrapper#key"><a href="InputWrapper.html#key">key</a></li>
+            
+                <li class="  " data-name="InputWrapper#next"><a href="InputWrapper.html#next">next</a></li>
+            
+                <li class="  " data-name="InputWrapper#pause"><a href="InputWrapper.html#pause">pause</a></li>
+            
+                <li class="  " data-name="InputWrapper#resume"><a href="InputWrapper.html#resume">resume</a></li>
+            
+                <li class="parent  " data-name="InputWrapper#start"><a href="InputWrapper.html#start">start</a></li>
+            
+                <li class="  " data-name="InputWrapper#stop"><a href="InputWrapper.html#stop">stop</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Logger">
+            <span class="title  ">
+                
+                <a href="Logger.html">Logger</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Logger.from"><a href="Logger.html#.from">from</a></li>
+            
+                <li class="parent  " data-name="Logger#debug"><a href="Logger.html#debug">debug</a></li>
+            
+                <li class="parent  " data-name="Logger#error"><a href="Logger.html#error">error</a></li>
+            
+                <li class="parent  " data-name="Logger#info"><a href="Logger.html#info">info</a></li>
+            
+                <li class="parent  " data-name="Logger#log"><a href="Logger.html#log">log</a></li>
+            
+                <li class="parent  " data-name="Logger#setFileTransport"><a href="Logger.html#setFileTransport">setFileTransport</a></li>
+            
+                <li class="parent  " data-name="Logger#setInstance"><a href="Logger.html#setInstance">setInstance</a></li>
+            
+                <li class="parent  " data-name="Logger#setLevel"><a href="Logger.html#setLevel">setLevel</a></li>
+            
+                <li class="parent  " data-name="Logger#silly"><a href="Logger.html#silly">silly</a></li>
+            
+                <li class="parent  " data-name="Logger#trace"><a href="Logger.html#trace">trace</a></li>
+            
+                <li class="parent  " data-name="Logger#warn"><a href="Logger.html#warn">warn</a></li>
+            
+                <li class="parent  " data-name="Logger#warning"><a href="Logger.html#warning">warning</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="NSyslog">
+            <span class="title  ">
+                
+                <a href="NSyslog.html">NSyslog</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class=" " data-name="NSyslog#config"><a href="NSyslog.html#config">config</a></li>
+            
+                <li class="parent " data-name="NSyslog#datadir"><a href="NSyslog.html#datadir">datadir</a></li>
+            
+                <li class="parent " data-name="NSyslog#forked"><a href="NSyslog.html#forked">forked</a></li>
+            
+                <li class=" " data-name="NSyslog#modules"><a href="NSyslog.html#modules">modules</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="NSyslog.readConfig"><a href="NSyslog.html#.readConfig">readConfig</a></li>
+            
+                <li class="parent  " data-name="NSyslog.setLogger"><a href="NSyslog.html#.setLogger">setLogger</a></li>
+            
+                <li class="parent  " data-name="NSyslog#push"><a href="NSyslog.html#push">push</a></li>
+            
+                <li class="  " data-name="NSyslog#subscribe"><a href="NSyslog.html#subscribe">subscribe</a></li>
+            
+                <li class="  " data-name="NSyslog#unsubscribe"><a href="NSyslog.html#unsubscribe">unsubscribe</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Processor">
+            <span class="title  ">
+                
+                <a href="Processor.html">Processor</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class=" " data-name="Processor#$def"><a href="Processor.html#$def">$def</a></li>
+            
+                <li class=" " data-name="Processor#id"><a href="Processor.html#id">id</a></li>
+            
+                <li class=" " data-name="Processor#own"><a href="Processor.html#own">own</a></li>
+            
+                <li class=" " data-name="Processor#streams"><a href="Processor.html#streams">streams</a></li>
+            
+                <li class=" " data-name="Processor#type"><a href="Processor.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="Processor#configure"><a href="Processor.html#configure">configure</a></li>
+            
+                <li class="  " data-name="Processor#key"><a href="Processor.html#key">key</a></li>
+            
+                <li class="  " data-name="Processor#pause"><a href="Processor.html#pause">pause</a></li>
+            
+                <li class="parent  " data-name="Processor#process"><a href="Processor.html#process">process</a></li>
+            
+                <li class="parent  " data-name="Processor#push"><a href="Processor.html#push">push</a></li>
+            
+                <li class="  " data-name="Processor#resume"><a href="Processor.html#resume">resume</a></li>
+            
+                <li class="  " data-name="Processor#start"><a href="Processor.html#start">start</a></li>
+            
+                <li class="  " data-name="Processor#stop"><a href="Processor.html#stop">stop</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Queue">
+            <span class="title  ">
+                
+                <a href="Queue.html">Queue</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Queue#pop"><a href="Queue.html#pop">pop</a></li>
+            
+                <li class="parent  " data-name="Queue#push"><a href="Queue.html#push">push</a></li>
+            
+                <li class="parent  " data-name="Queue#size"><a href="Queue.html#size">size</a></li>
+            
+                <li class="parent  " data-name="Queue#stats"><a href="Queue.html#stats">stats</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Semaphore">
+            <span class="title  ">
+                
+                <a href="Semaphore.html">Semaphore</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class="parent " data-name="Semaphore#current"><a href="Semaphore.html#current">current</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Semaphore#available"><a href="Semaphore.html#available">available</a></li>
+            
+                <li class="parent  " data-name="Semaphore#destroy"><a href="Semaphore.html#destroy">destroy</a></li>
+            
+                <li class="parent  " data-name="Semaphore#leave"><a href="Semaphore.html#leave">leave</a></li>
+            
+                <li class="parent  " data-name="Semaphore#take"><a href="Semaphore.html#take">take</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="SharedMem">
+            <span class="title  ">
+                
+                <a href="SharedMem.html">SharedMem</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="SharedMem#get"><a href="SharedMem.html#get">get</a></li>
+            
+                <li class="parent  " data-name="SharedMem#hget"><a href="SharedMem.html#hget">hget</a></li>
+            
+                <li class="parent  " data-name="SharedMem#hpush"><a href="SharedMem.html#hpush">hpush</a></li>
+            
+                <li class="parent  " data-name="SharedMem#hset"><a href="SharedMem.html#hset">hset</a></li>
+            
+                <li class="parent  " data-name="SharedMem#set"><a href="SharedMem.html#set">set</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Streams.AwaitStream">
+            <span class="title  ">
+                
+                <a href="Streams.AwaitStream.html">Streams.AwaitStream</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Streams.BypassStream">
+            <span class="title  ">
+                
+                <a href="Streams.BypassStream.html">Streams.BypassStream</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Streams.BypassStream#close"><a href="Streams.BypassStream.html#close">close</a></li>
+            
+                <li class="parent  " data-name="Streams.BypassStream#subscribe"><a href="Streams.BypassStream.html#subscribe">subscribe</a></li>
+            
+                <li class="parent  " data-name="Streams.BypassStream#unsubscribe"><a href="Streams.BypassStream.html#unsubscribe">unsubscribe</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Streams.FilterStream">
+            <span class="title  ">
+                
+                <a href="Streams.FilterStream.html">Streams.FilterStream</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Streams.FilterStream#close"><a href="Streams.FilterStream.html#close">close</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Streams.QueueStream">
+            <span class="title  ">
+                
+                <a href="Streams.QueueStream.html">Streams.QueueStream</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="TransformProcessor">
+            <span class="title  ">
+                
+                <a href="TransformProcessor.html">TransformProcessor</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class=" " data-name="TransformProcessor#$def"><a href="TransformProcessor.html#$def">$def</a></li>
+            
+                <li class=" " data-name="TransformProcessor#id"><a href="TransformProcessor.html#id">id</a></li>
+            
+                <li class=" " data-name="TransformProcessor#own"><a href="TransformProcessor.html#own">own</a></li>
+            
+                <li class=" " data-name="TransformProcessor#streams"><a href="TransformProcessor.html#streams">streams</a></li>
+            
+                <li class=" " data-name="TransformProcessor#type"><a href="TransformProcessor.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="TransformProcessor#configure"><a href="TransformProcessor.html#configure">configure</a></li>
+            
+                <li class="  " data-name="TransformProcessor#key"><a href="TransformProcessor.html#key">key</a></li>
+            
+                <li class="  " data-name="TransformProcessor#pause"><a href="TransformProcessor.html#pause">pause</a></li>
+            
+                <li class="  " data-name="TransformProcessor#process"><a href="TransformProcessor.html#process">process</a></li>
+            
+                <li class="  " data-name="TransformProcessor#push"><a href="TransformProcessor.html#push">push</a></li>
+            
+                <li class="  " data-name="TransformProcessor#resume"><a href="TransformProcessor.html#resume">resume</a></li>
+            
+                <li class="  " data-name="TransformProcessor#start"><a href="TransformProcessor.html#start">start</a></li>
+            
+                <li class="  " data-name="TransformProcessor#stop"><a href="TransformProcessor.html#stop">stop</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Transporter">
+            <span class="title  ">
+                
+                <a href="Transporter.html">Transporter</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            <span class="subtitle">Members</span>
+            
+                <li class=" " data-name="Transporter#$def"><a href="Transporter.html#$def">$def</a></li>
+            
+                <li class=" " data-name="Transporter#id"><a href="Transporter.html#id">id</a></li>
+            
+                <li class=" " data-name="Transporter#own"><a href="Transporter.html#own">own</a></li>
+            
+                <li class=" " data-name="Transporter#streams"><a href="Transporter.html#streams">streams</a></li>
+            
+                <li class=" " data-name="Transporter#type"><a href="Transporter.html#type">type</a></li>
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="Transporter#configure"><a href="Transporter.html#configure">configure</a></li>
+            
+                <li class="  " data-name="Transporter#key"><a href="Transporter.html#key">key</a></li>
+            
+                <li class="  " data-name="Transporter#pause"><a href="Transporter.html#pause">pause</a></li>
+            
+                <li class="  " data-name="Transporter#resume"><a href="Transporter.html#resume">resume</a></li>
+            
+                <li class="  " data-name="Transporter#start"><a href="Transporter.html#start">start</a></li>
+            
+                <li class="  " data-name="Transporter#stop"><a href="Transporter.html#stop">stop</a></li>
+            
+                <li class="parent  " data-name="Transporter#transport"><a href="Transporter.html#transport">transport</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Watermark.ChildDB">
+            <span class="title  ">
+                
+                <a href="Watermark.ChildDB.html">Watermark.ChildDB</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="Watermark.ChildDB#clean"><a href="Watermark.ChildDB.html#clean">clean</a></li>
+            
+                <li class="  " data-name="Watermark.ChildDB#create"><a href="Watermark.ChildDB.html#create">create</a></li>
+            
+                <li class="  " data-name="Watermark.ChildDB#get"><a href="Watermark.ChildDB.html#get">get</a></li>
+            
+                <li class="  " data-name="Watermark.ChildDB#remove"><a href="Watermark.ChildDB.html#remove">remove</a></li>
+            
+                <li class="  " data-name="Watermark.ChildDB#save"><a href="Watermark.ChildDB.html#save">save</a></li>
+            
+                <li class="  " data-name="Watermark.ChildDB#start"><a href="Watermark.ChildDB.html#start">start</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Watermark.MasterDB">
+            <span class="title  ">
+                
+                <a href="Watermark.MasterDB.html">Watermark.MasterDB</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="  " data-name="Watermark.MasterDB#clean"><a href="Watermark.MasterDB.html#clean">clean</a></li>
+            
+                <li class="  " data-name="Watermark.MasterDB#create"><a href="Watermark.MasterDB.html#create">create</a></li>
+            
+                <li class="  " data-name="Watermark.MasterDB#get"><a href="Watermark.MasterDB.html#get">get</a></li>
+            
+                <li class="parent  " data-name="Watermark.MasterDB#keys"><a href="Watermark.MasterDB.html#keys">keys</a></li>
+            
+                <li class="parent  " data-name="Watermark.MasterDB#readStream"><a href="Watermark.MasterDB.html#readStream">readStream</a></li>
+            
+                <li class="  " data-name="Watermark.MasterDB#remove"><a href="Watermark.MasterDB.html#remove">remove</a></li>
+            
+                <li class="parent  " data-name="Watermark.MasterDB#removeall"><a href="Watermark.MasterDB.html#removeall">removeall</a></li>
+            
+                <li class="  " data-name="Watermark.MasterDB#save"><a href="Watermark.MasterDB.html#save">save</a></li>
+            
+                <li class="parent  " data-name="Watermark.MasterDB#saveall"><a href="Watermark.MasterDB.html#saveall">saveall</a></li>
+            
+                <li class="  " data-name="Watermark.MasterDB#start"><a href="Watermark.MasterDB.html#start">start</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+        <li class="item" data-name="Watermark.WatermarkDB">
+            <span class="title  ">
+                
+                <a href="Watermark.WatermarkDB.html">Watermark.WatermarkDB</a>
+            </span>
+            <ul class="members itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="typedefs itemMembers">
+            
+            </ul>
+            <ul class="methods itemMembers">
+            
+            <span class="subtitle">Methods</span>
+            
+                <li class="parent  " data-name="Watermark.WatermarkDB#clean"><a href="Watermark.WatermarkDB.html#clean">clean</a></li>
+            
+                <li class="parent  " data-name="Watermark.WatermarkDB#create"><a href="Watermark.WatermarkDB.html#create">create</a></li>
+            
+                <li class="parent  " data-name="Watermark.WatermarkDB#get"><a href="Watermark.WatermarkDB.html#get">get</a></li>
+            
+                <li class="parent  " data-name="Watermark.WatermarkDB#remove"><a href="Watermark.WatermarkDB.html#remove">remove</a></li>
+            
+                <li class="parent  " data-name="Watermark.WatermarkDB#save"><a href="Watermark.WatermarkDB.html#save">save</a></li>
+            
+                <li class="parent  " data-name="Watermark.WatermarkDB#start"><a href="Watermark.WatermarkDB.html#start">start</a></li>
+            
+            </ul>
+            <ul class="events itemMembers">
+            
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+    <div class="main">
+        <h1 class="page-title" data-filename="Semaphore.html">Class: Semaphore</h1>
+        
+
+
+
+<section>
+    
+<header>
+    <div class="header content-size">
+        <h2>Semaphore
+        </h2>
+        
+            <div class="class-description">Async Semaphore implementation</div>
+        
+    </div>
+</header>  
+
+<article class="content-size">
+    <div class="container-overview">
+    
+    
+    
+        
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Semaphore">
+            <a class="share-icon" href="#Semaphore"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+                new Semaphore
+            </span>
+            <span class="signature">(capacity)</span>
+            
+            
+            
+            
+        </h4>
+    
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>A Semaphore implementation to control data
+access from async functions</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>capacity</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                Initial capacity (number of slots)</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+
+    
+    <pre class="prettyprint"><code>const Semaphore = require('nsyslog/lib/semaphore');
+
+let sem = new Semaphore(5);
+while(true) {
+	await sem.take();
+	setTimeout(()=>{
+		console.log('Hi there!');
+		sem.leave();
+	}, Math.random()*1000);
+}</code></pre>
+    
+
+    
+</dd>
+
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <h3 class="subsection-title">Members</h3>
+        
+        <dl class="list-members">
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="current">
+            <a class="share-icon" href="#current"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">current</span>
+            
+            
+            
+            
+            
+        </h4>
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        Gets the current number of taken slots
+    </div>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+        <h3 class="subsection-title">Methods</h3>
+        
+        <dl class="list-methods">
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="available">
+            <a class="share-icon" href="#available"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+                available
+            </span>
+            <span class="signature">(n)</span><span class="type-signature">boolean</span>
+            
+            
+            
+            
+        </h4>
+    
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Returns if there are available slots to take without
+await for them
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                Number of slots</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        boolean
+                        
+                    
+            </td>
+            <td class="description last"></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="destroy">
+            <a class="share-icon" href="#destroy"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+                destroy
+            </span>
+            <span class="signature">()</span>
+            
+            
+            
+            
+        </h4>
+    
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Destroys the semaphore, meaning that all taken
+slots are freed and all take calls will be rejected
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="leave">
+            <a class="share-icon" href="#leave"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+                leave
+            </span>
+            <span class="signature">(<span class="optional">n</span>)</span>
+            
+            
+            
+            
+        </h4>
+    
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Release n taken slots
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                Slots to release (1 by default)</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="take">
+            <a class="share-icon" href="#take"><span class="glyphicon glyphicon-link"></span></a>
+            <span class="">
+                take
+            </span>
+            <span class="signature">(<span class="optional">n</span>)</span><span class="type-signature">Promise</span>
+            
+            
+            
+            
+        </h4>
+    
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        Asks for n slots to be taken
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                Slots to take (1 by default)</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        Promise
+                        
+                    
+            </td>
+            <td class="description last">Resolved when the slots are available</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+    
+    
+    
+</dd>
+
+        </dl>
+    
+    
+    
+    
+    
+
+    
+</article>
+
+</section>  
+
+
+
+
+
+        
+
+        <footer class="content-size">
+            <div class="footer">
+                Documentation generated by <a target="_blank" href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sun Nov 17 2019 01:06:17 GMT+0100 (GMT+01:00)
+            </div>
+        </footer>
+    </div>
+</div>
+<script>prettyPrint();</script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
