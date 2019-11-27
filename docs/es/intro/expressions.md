@@ -140,10 +140,10 @@ En dicha forma, no es necesario referenciar el dato de entrada; la ruta empieza 
 ```javascript
 // Expresión válida
 "${user.email} => ${rec.bytes}"
+"${this.rec.bytes}"
 
 // Expresiones inválidas
 "${data.user.email}"
-"${this.rec.bytes}"
 ```
 
 ### JSON
@@ -151,6 +151,9 @@ Si lo que se desea es obtener una representación en JSON del dato de entrada, s
 
 ```javascript
 "${JSON}"
+"${JSON<:path>}"
+"${JSON<:spaces>}"
+"${JSON<:path><:spaces>}"
 ```
 
 Esto dará como resultado el dato de entrada serializado y formateado:
@@ -167,9 +170,10 @@ En ciertas ocasiones puede ser necesario que un mismo accesor referencia a multi
 
 // Evaluación
 "${rec.bytes || this.rec.packets}"
+"${this.rec.bytes || this.rec.packets}"
 ```
 
-Dará como resultado:
+Darán como resultado:
 ```javascript
 // Interpolación
 "El ratio de entrada / salida es 0.124"

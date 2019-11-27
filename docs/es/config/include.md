@@ -69,7 +69,7 @@ common_tasks.json:
 
 En este ejemplo, hemos separado la configuración en dos ficheros; un fichero principal (logagent.json), y un segundo fichero de procesadores reutilizable (common_tasks.json).
 
-## namespaces
+## namespaces y resolución de conflictos
 Los *namespaces* (espacios de nombres), permiten encapsular los componentes definidos en un fichero bajo un identificador común y único, para evitar conflictos con otros componentes incluidos desde otros ficheros y que puedan tener id's de componentes idénticos.
 
 Por ejemplo:
@@ -115,11 +115,32 @@ logagent.json:
 }
 ```
 
-Existe un conflicto puesto que dos ficheros han declarado dos procesadores distintos pero con el mismo identificador ("parser"). Cuando la configuración se lea, sólo uno de ellos será efectivo (el otro quedará sobrescrito), y la configuración podrá tener un comportamiento no deseado.
+Existe un conflicto puesto que dos ficheros han declarado dos procesadores distintos pero con el mismo identificador ("parser"). Cuando la configuración se lea, sólo uno de ellos será efectivo (el otro quedará sobrescrito), y la configuración tendrá un comportamiento no deseado.
 
-Para evitarlo podemos recurrir a los *namespaces*. Existen dos formas de declarar y usar un namespaces:
+Lamentablemente, a día de hoy nsyslog no soporta todavía el uso de *namespaces*, aunque se está trabajando duramente en ello. Mientras tanto, las única recomendación que podemos dar es:
 
-* namespace intrínseco: El fichero define su propio namespace, y por lo tanto es obligatorio conocerlo y utilizarlo.
-* namespace extrínseco: Se define al incluir el fichero.
+* Siempre usar ID's de componentes claramente diferenciados (pseudo *namespaces*)
 
-Es posible usar cualquier combinación de los dos métodos, siendo acumulativos.
+```json
+{
+	"processors" : {
+		"proc:common:json:parser" : {
+			"type" : "jsonparser",
+			...
+		}
+	}
+}
+```
+
+De esta forma trataremos de asegurarnos que no haya conflictos, además de sentar las bases para una futura implentación de *namespaces* en nsyslog.
+
+## Múltiple inclusión
+nsyslog procesa los ficheros de configuración mediante el siguiente flujo:
+1. Lee el fichero principal
+2. Parsea el contenido a JSON
+3. Busca el elemento "include"
+4. Lee los ficheros contenidos en el campo "include" y los parsea
+5. Combina el fichero principal con los ficheros hijo
+6. Repite el proceso desde el punto 3 con el nuevo fichero combinado
+
+Como se puede apreciar, no es un proceso en el que cada fichero tiene su propio ámbito, sino que basta incluir una sola vez un fichero para que su contenido sea accesible desde los demás ficheros referenciados, sea cual sea el nivel en el que fueron incluidos. Dicho de otra forma, nsyslog simplemente genera un "gran" fichero resultado de combinar todos aquellos que en algún momento han sido referenciados desde un elemento "include".

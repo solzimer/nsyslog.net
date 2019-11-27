@@ -42,7 +42,7 @@ module.exports = {
 				label : "Español",
 				sidebar: {
 					'/es/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
-					'/es/config/' : ['basic','include'],
+					'/es/config/' : ['basic','include','properties'],
 				},
 				nav : [
 		      { text: 'Inicio', link: '/es/intro/install' },
