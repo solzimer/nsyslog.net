@@ -23,7 +23,6 @@ Además, añade el siguiente operador de expresión:
 De esta forma, es posible incluso mezclar ambos motores, permitiendo crear expresiones complejas que aprovechan lo mejor de ambos motores.
 
 ## Expresiones de evaluación
-
 Las expresiones de evaluación son aquellas que nos permiten crear una condición en base a los datos de entrada. Son usadas principalmente en filtros y condiciones sobre flujos, para decidir si un dato debe o no ser procesado por un componente.
 
 Las expresiones de evaluación pueden usar tanto el motor *jsepxr* como el motor *mingo*.
@@ -133,9 +132,10 @@ La forma genérica de uso es la siguiente:
 
 ```
 ${prop1.subprop2...subpropN}
+${this.prop1.subprop2...subpropN}
 ```
 
-En dicha forma, no es necesario referenciar el dato de entrada; la ruta empieza siempre por la propiedad de primer:
+En dicha forma, no es necesario referenciar el dato de entrada; la ruta empieza siempre por *this*, o por la propiedad de primer nivel:
 
 ```javascript
 // Expresión válida
@@ -162,7 +162,7 @@ Esto dará como resultado el dato de entrada serializado y formateado:
 ```
 
 ### Puntero "this"
-En ciertas ocasiones puede ser necesario que un mismo accesor referencia a multiples propiedades del dato de entrada. En estos casos, la primera referencia usará la forma genérica, mientras que las restantes requieren el uso del puntero **this**:
+En ciertas ocasiones puede ser necesario que un mismo accesor referencie a multiples propiedades del dato de entrada. En estos casos, la primera referencia usará la forma genérica, mientras que las restantes requieren el uso del puntero **this**:
 
 ```javascript
 // Interpolación
@@ -180,6 +180,39 @@ Darán como resultado:
 
 // Evaluación
 124
+```
+
+## Evaluación javascript
+Las expresiones jsexpr permiten evaluar código javascript, aunque su forma difiere si son expresiones de evaluación o de interpolación.
+
+```javascript
+// Evaluación
+"${name}.length > 0"
+"${timestamp}.toISOString()"
+
+// Interpolación
+"${name.length>0}"
+"${timestamp.toISOString()}"
+```
+
+Como se puede ver, en las expresiones de evaluación, el código javascript ocurre fuera del accesor, ya que éste sólo referencia al valor accedido, y luego la expresión resultante es evaluada como javascript.
+En el caso de las expresiones de interpolación, el código ocurre dentro del accesor, ya que todo lo que ocurra fuera de éste, es interpretado como texto que se interpola junto al resultado de evaluar el accesor.
+
+## Trucos
+Es posible usar funciones inline anónimas, siempre y cuando no incluyan llaves (**{}**):
+```javascript
+// Evaluación
+"${data.iplist}.some(ip=>ip.startsWith('192.'))"
+
+// Interpolación
+"${text.split(' ').filter(word=>word.length>3).join(' ')}"
+```
+
+También es posible referenciar datos y funciones que no pertenecen a un objeto:
+```javascript
+"${null || new Date()}"
+"${null || [1,2,3,4,5]}"
+"${null || JSON.parse(this.jsontext)}"
 ```
 
 ## Tipo de salida

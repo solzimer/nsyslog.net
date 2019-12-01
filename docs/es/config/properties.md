@@ -87,3 +87,6 @@ logagent.json
 ```
 
 Las propiedades son referenciadas usando el patrón **@{<expresión>}**; es decir, son expresiones de interpolación jsexpr, que siguen las mismas reglas, con la salvedad de que empiezan por **@** en vez de **$**.
+
+Para saber más sobre las expresiones, puedes consultar el apartado correspondiente en la introducción:
+[Expresiones](../intro/expressions.md)
