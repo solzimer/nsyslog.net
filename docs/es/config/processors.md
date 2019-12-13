@@ -39,7 +39,7 @@ logagent.json
 Todos los elementos de proceso (*processor*) siguen el esquema de [componente](./components), por lo que se definen con un ID / alias (*parse_timestamp*, *set_data*...) y tienen el siguiente esquema de configuración:
 
 * **type** : El tipo de *processor*. Puedes ver todos los tipos disponibles de forma nativa en nsyslog en el apartado de [processors](../processors/index). Como se verá más adelante, esposible extender y crear nuevos procesadores más allá de los definidos por nsyslog.
-* **when** : Define un filtro para la salida de los datos. Para más información sobre los filtros, vea el apartado de filtros de [componentes](./components.md)
+* **when** : Define un filtro para la salida de los datos. Para más información sobre los filtros, vea el apartado de filtros de [componentes](./components)
 * **disabled** : (*true* / *false*) Deshabilita el componente, de forma que nunca será instanciado ni usado por ningún flujo.
 * **config** : Un objeto que define los parámetros de configuración de cada *processor*. Estos parámetros son específicos de cada componente.
 

@@ -23,13 +23,13 @@ module.exports = {
 		label : "English",
     sidebar: {
 			'/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
-			'/config/' : ['basic','include','properties','config'],
+			'/config/' : ['main','include','properties','config','inputs','processors','transporters'],
 		},
     nav: [
       { text: 'Start', link: '/intro/install' },
 			{ text: 'Docs', items: [
 					{text:'Introduction', link: '/intro/basics'},
-					{text:'Configuration', link: '/config/basic'}
+					{text:'Configuration', link: '/config/main'}
 				]
 			},
 			{ text: 'API docs', type:'external', link:"/jsdoc/index.html", target:"_blank", rel:"jsdocs"},
@@ -42,13 +42,13 @@ module.exports = {
 				label : "Español",
 				sidebar: {
 					'/es/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
-					'/es/config/' : ['basic','include','properties','config','inputs'],
+					'/es/config/' : ['main','include','properties','config','inputs','processors','transporters'],
 				},
 				nav : [
 		      { text: 'Inicio', link: '/es/intro/install' },
 					{ text: 'Docs', items: [
 							{text:'Introducción', link: '/es/intro/basics'},
-							{text:'Configuración', link: '/es/config/basic'},
+							{text:'Configuración', link: '/es/config/main'},
 							{text:'Fuentes', link: '/es/inputs/index'},
 							{text:'Procesadores', link: '/es/processors/index'},
 							{text:'Transportes', link: '/es/transporters/index'},
