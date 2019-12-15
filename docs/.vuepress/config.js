@@ -23,7 +23,7 @@ module.exports = {
 		label : "English",
     sidebar: {
 			'/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
-			'/config/' : ['main','include','properties','config','inputs','processors','transporters'],
+			'/config/' : ['main','components','include','properties','config','inputs','processors','transporters'],
 		},
     nav: [
       { text: 'Start', link: '/intro/install' },
@@ -42,7 +42,7 @@ module.exports = {
 				label : "Español",
 				sidebar: {
 					'/es/intro/' : ['install','basics','example1','example2','commands','cli','expressions'],
-					'/es/config/' : ['main','include','properties','config','inputs','processors','transporters'],
+					'/es/config/' : ['main','components','include','properties','config','inputs','processors','transporters'],
 				},
 				nav : [
 		      { text: 'Inicio', link: '/es/intro/install' },

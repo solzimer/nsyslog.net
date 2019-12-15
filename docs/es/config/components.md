@@ -1,79 +1,77 @@
 # Componentes
 
-Nsyslog se basa en una arquitectura modular de componentes, los cuales se encargan de recibir unos datos de entrada, procesarlos, y generar unos datos de salida. Cada componente tiene un ID / alias, y un tipo.
+Nsyslog se basa en una arquitectura modular de componentes, los cuales se encargan de recibir unos datos de entrada, procesarlos, y generar unos datos de salida. Cada componente tiene un ID / alias, y un tipo, el cual identifica su función.
 
-Existen tres tipos de componentes:
+Existen tres categorías de componentes:
+* **Input** : Componentes para entrada de datos. Se encargan de leer datos de origines y generar datos de entrada para su posterior proceso.
+* **Processor** : Componentes para proceso de datos. Reciben un dato de entrada, lo transforman y emiten nuevos datos derivados de éste.
+* **Transporter** : Componentes para el transporte de datos. Reciben un dato de entrada y lo envían a sus destinos.
+
+Si bien estas tres categorías difieren en su función principal, todas comparten un modelo de configuración común, el cual se expresa siguiendo el siguiente esquema:
+
+```json
+"<ID/Alias>" : {
+	"type" : "<Type>",
+	"disabled" : "<true / false>",
+	"attach" : ["<flow_list>"],
+	"when" : {
+		"filter" : "<Eval Expression>",
+		"match" : "<process, block, bypass>",
+		"nomatch" : "<process, block, bypass>"
+	},
+	"then" : {
+		"filter" : "<Eval Expression>",
+		"match" : "<process, block>",
+		"nomatch" : "<process, block>"
+	},
+	"config" : {
+		"<prop1>" : "<val1>",
+		...
+		"<propn>" : "<valn>"
+	}
+}
+```
+
+## ID / Alias
+El ID o Alias es el identificador que hace referencia a una instancia de un componente. Puede ser cualquier nombre que siga las reglas de los nombres de propiedades JSON, y es de libre asignación.
 
 ### Ejemplo
-
-logagent.json
 ```json
 {
-	"transporters" : {
-		"save_files" : {
+	"inputs" : {
+		"reader_file1" : {
 			"type" : "file",
 			"config" : {
-				"path" : "/var/log/${date}/${app}.log",
-				"format" : "${timestamp} ${level} ${message}"
+				"path" : "/var/log/*.log"
 			}
 		},
-		"save_mongo" : {
-			"type" : "mongo",
+		"reader_file2" : {
+			"type" : "file",
+			"when" : {
+				"filter" : "/Exception/.test(${originalMessage})",
+				"match" : "process",
+				"nomatch" : "block"
+			},
 			"config" : {
-				"url" : "mongo://localhost/logdata",
-				"collection" : "logs",
-				"format" : "${JSON}"
+				"path" : "/home/user/logs/*.log"
 			}
 		}
 	}
 	...
 }
 ```
+En este ejemplo se han declarado dos componentes de categoría *input*, ambos de tipo *file* (lectura de fichero). Aunque sean del mismo tipo, al usar dos IDs distintos (reader_file1, reader_file2), se generan dos instancias diferentes, cada una con su propia configuración.
 
-## Parámetros
+## type
+La propiedad *type* indica el tipo de componente. NSyslog incluye de forma nativa un amplio catálogo de entradas, procesadores y transportes. En el ejemplo anterior hemos usados dos entradas de tipo *file* (lectura de fichero).
 
-Todos los elementos de transporte (*transporter*) siguen el esquema de [componente](./components), por lo que se definen con un ID / alias (*save_files*, *save_mongo*...) y tienen el siguiente esquema de configuración:
+## disabled
+Deshabilita un componente, de forma que nunca es instanciado y, por lo tanto, su uso es totalmente ignorado por el motor de NSyslog. Cuando esto ocurre, el componente pasa a convertirse en un *bypass*, esto es, los datos de entrada pasan sin más al siguiente elemento de proceso, ignorando la existencia del componente deshabilitado.
 
-* **type** : El tipo de *transporter*. Puedes ver todos los tipos disponibles de forma nativa en nsyslog en el apartado de [transporters](../transporters/index). Como se verá más adelante, esposible extender y crear nuevos transportes más allá de los definidos por nsyslog.
-* **when** : Define un filtro para la salida de los datos. Para más información sobre los filtros, vea el apartado de filtros de [componentes](./components)
-* **disabled** : (*true* / *false*) Deshabilita el componente, de forma que nunca será instanciado ni usado por ningún flujo.
-* **config** : Un objeto que define los parámetros de configuración de cada *transporter*. Estos parámetros son específicos de cada componente.
+## attach
+Esta propiedad sólo está disponible en los componentes de entrada (*input*), y su función es la de ligar éstos directamente a unos determinados flujos. Es una característica usada, fundamentalmente, en los flujos bifurcados (*forked flows*), como se verá más adelante.
 
-## Instancias
-
-Cada vez que se declara un *transporter* en el apartado de *transporters*, se genera una nueva instancia del componente con sus propios parámetros de configuración; así, es posible declarar distintas instancias de un mismo tipo:
+## when
+La misión de esta propiedad es realizar un filtrado de los datos antes de ser procesados. Esta propiedad sólo está disponible en componentes *processor* y *transporter*, ya que en los *input* los datos son generados por éste (no hay entrada previa de datos).
 
 ### Ejemplo
-```json
-{
-	"processors" : {
-		"save_root_files" : {
-			"type" : "file",
-			"when" : {
-				"filter" : "${username}=='root'",
-				"match" : "process",
-				"nomatch" : "bypass"
-			},
-			"config" : {
-				"path" : "/var/log/${date}/${app}.log",
-				"format" : "${timestamp} ${level} ${message}"
-			}
-		},
-		"save_user_files" : {
-			"type" : "file",
-			"when" : {
-				"filter" : "${username}!='root'",
-				"match" : "process",
-				"nomatch" : "bypass"
-			},
-			"config" : {
-				"path" : "/home/${username}/log/${date}/${app}.log",
-				"format" : "${timestamp} ${level} ${message}"
-			}
-		}
-	}
-	...
-}
-```
-
-Son dos instancias de un *transporter* tipo *file* (guardar datos en fichero)
