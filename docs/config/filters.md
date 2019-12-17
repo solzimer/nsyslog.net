@@ -1,11 +1,11 @@
-## Filters
+# Filtros
 
-Filters describe expressions that entries must match in order to be sent to their corresponding flows. These expressions are written following the [jsexpr](https://www.npmjs.com/package/jsexpr) expression evaluator.
+Los filtros describen expresiones contra las que se van a evaluar los datos de entrada. Estos, pueden luego ser referenciados en los flujos para filtrar los datos que van a ser procesados.
 
-## Configuration
-Filters can be declared in the JSON configuration file, or they can be used inline by the flows:
+## Configuración
+Los filtros se declaran en el apartado *filters* del fichero de configuración, y pueden ser agrupados en el apartado *filterGroups*:
 
-```javascript
+```json
 {
 	"filters" : {
 		"fromUDP" : "${server.protocol}=='udp4'",
@@ -14,7 +14,7 @@ Filters can be declared in the JSON configuration file, or they can be used inli
 		"httpOk" : "${message}.match(/ 200/)",
 		"httpRed" : "${message}.match(/ 302/)",
 		"httpErr" : "${message}.match(/ (404|500)/)"
-	}
+	},
 
 	"filterGroups" : {
 		"allcodes" : ["httpOk","httpRed","httpErr"]
@@ -22,29 +22,25 @@ Filters can be declared in the JSON configuration file, or they can be used inli
 }
 ```
 
-Then, they can be used by the flows:
-```javascript
+## Uso
+Una vez declarados, pueden ser referenciados en las propiedades *from* y *when* de los flujos:
+```json
 {
 	"flows" : [
-		{
-			"from":"localhost", "when":["httpOk"], "transporters":"log", "mode":"parallel",
-			"flows" : [
-				// Nested flows, using the same "from" filter, but different "when"
-				{"when":["httpOk"], "transporters":"log", "mode":"parallel"},
-				{"when":["httpRed"], "transporters":"warn", "mode":"parallel"},
-				{"when":["httpErr"], "transporters":"error", "mode":"serial"}
-			]
-		},
-		// Using a filter group
+		{"from":"localhost", "when":["httpOk"], "transporters":"log", "mode":"parallel"},
 		{"from":["interface","$allcodes"], "processors":["stats"], "transporters":["debug"], "mode":"serial"},
-
-		// Inline filter, doesn't need to be declared
 		{"from":"${id}=='glob'", "disabled":false, "transporters":["debug"], "mode":"serial"}
 	]
 }
 ```
 
-## Filter Groups
-As seen before, you can group filters. The logic behind filter groups is like an "OR" operation. Any matched expression will activate the filter.
+## Filtros "in-line"
+No es necesario declarar los filtros en el apartado *filters* antes de usarlos, también es posible declarlos "in-line" en las propias propiedades *from* y *when*:
 
-[Back](../README.md)
+```json
+{
+	"flows" : [
+		{"from":"${id}=='glob'", "when":"${sev}>3", "transporters":["debug"], "mode":"serial"}		
+	]
+}
+```
