@@ -1,4 +1,4 @@
-# processors
+# Procesadores
 
 El elemento *processors* permite instanciar los componentes de proceso (procesadores):
 
@@ -84,3 +84,63 @@ Cada vez que se declara un *processor* en el apartado de *processors*, se genera
 ```
 
 Son dos instancias de un *processor* tipo *properties* (establecer propiedades)
+
+## Grupos
+A veces es conveniente agrupar un conjunto de procesadores bajo un solo ID, de forma que sea más sencillo referenciar múltiples veces ese grupo. Por ejemplo, si tenemos la siguiente configuración:
+
+```json
+{
+	"processors" : {
+		"syslogparser" : { ... },
+		"jsonparser" : { ... },
+		"dateparser" : { ... },
+		"csvout" : { ... }
+	},
+
+	"flows" : [
+		{
+			"id":"flow1",
+			"from":"file1",
+			"processors": ["syslogparser","jsonparser","dateparser","csvout"]
+		},
+		{
+			"id":"flow2",
+			"from":"file2",
+			"processors": ["syslogparser","jsonparser","dateparser","csvout"]
+		}
+	]
+}
+```
+
+Tenemos dos flujos que deben referenciar los mismos procesadores; cualquier cambio en uno, afecta también al otro. Parece más sencillo y mantenible crear un grupo:
+```json
+{
+	"processors" : {
+		"syslogparser" : { ... },
+		"jsonparser" : { ... },
+		"dateparser" : { ... },
+		"csvout" : { ... }
+	},
+
+	"processorGroups" : {
+		"parser" : ["syslogparser","jsonparser","dateparser","csvout"]
+	},
+
+	"flows" : [
+		{
+			"id":"flow1",
+			"from":"file1",
+			"processors": ["$parser"]
+		},
+		{
+			"id":"flow2",
+			"from":"file2",
+			"processors": ["$parser"]
+		}
+	]
+}
+```
+
+Los grupos son referenciados por su ID, precedido del símbolo **&dollar;** (como **$parser**, en este caso concreto).
+
+Para obtener información más detallada sobre procesadores, puedes acceder a su [apartado correspondiente](../processors/index.md)

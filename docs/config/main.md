@@ -1,6 +1,5 @@
-# Introduction
-
-NSyslog is configured through a JSON config file. The skeleton of this file is as follows:
+# Configuración
+nsyslog se configura a través de un fichero en formato JSON. Por convención, solemos denominar a este fichero como **logagent.json**. La estructura básica de dicho fichero es:
 
 ```javascript
 {
@@ -10,10 +9,13 @@ NSyslog is configured through a JSON config file. The skeleton of this file is a
 		// List of JSON files
 	],
 
+	// Optional. Global values to use in config expressions
+	"properties" : {},
+
 	// Optional. Overrides global configurations
 	"config" : {},
 
-	// Filter definitions.
+	// Filter definitions. (optional)
 	"filters" : {},
 
 	// Filter groups (optional)
@@ -40,91 +42,3 @@ NSyslog is configured through a JSON config file. The skeleton of this file is a
 	]
 }
 ```
-
-## Include
-Every JSON config file can have an *include* section. This is a list of filepaths that will be read
-and merged into the main file. An included file can have also another *include* section.
-
-Example:
-*config.json*
-```JSON
-{
-	"include" : [
-		"./inputs.json"
-	],
-	"inputs" : {
-		"input1" : {
-			"type" : "redis"
-		}
-	}
-}
-```
-*inputs.json*
-```JSON
-{
-	"inputs" : {
-		"input2" : {
-			"type" : "syslog"
-		}
-	}
-}
-```
-
-Final configuration:
-```JSON
-{
-	"inputs" : {
-		"input1" : {
-			"type" : "redis"
-		},
-		"input2" : {
-			"type" : "syslog"
-		}
-	}
-}
-```
-
-Basic Configuration example:
-```JSON
-{
-	"config" : {
-		"datadir" : "/tmp/nsyslog",
-		"input" : {"maxPending" : 1000},
-		"buffer" : {"maxPending": 1000},
-		"processor" : {"maxPending": 1000},
-		"transporter" : {"maxPending": 1000}
-	},
-
-	"inputs" : {
-		"zmq" : {
-			"type" : "zmq",
-			"config" : {
-				"url" : "tcp://127.0.0.1:9999",
-				"mode" : "sub",
-				"channel" : "nsyslog_channel",
-				"format" : "json"
-			}
-		}
-	},
-
-	"transporters" : {
-		"console" : {
-			"type" : "console",
-			"config" : {
-				"format" : "${JSON}"
-			}
-		},
-		"null" : {
-			"type" : "null"
-		}
-	},
-
-	"flows" : [
-		{"from":"*", "transporters":["console"]}
-	]
-}
-```
-
-You can see a list of examples in [this link](../../config)
-
-[Back](../README.md)

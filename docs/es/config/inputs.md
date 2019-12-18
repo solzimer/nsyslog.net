@@ -1,4 +1,4 @@
-# inputs
+# Entradas
 
 El elemento *inputs* permite instanciar los componentes de entrada:
 

@@ -1,4 +1,4 @@
-# processors
+# Transportes
 
 El elemento *transporters* permite instanciar los componentes de transporte:
 
@@ -75,3 +75,70 @@ Cada vez que se declara un *transporter* en el apartado de *transporters*, se ge
 ```
 
 Son dos instancias de un *transporter* tipo *file* (guardar datos en fichero)
+
+## Grupos
+A veces es conveniente agrupar un conjunto de transportes bajo un solo ID, de forma que sea más sencillo referenciar múltiples veces ese grupo. Por ejemplo, si tenemos la siguiente configuración:
+
+```json
+{
+	"transporters" : {
+		"syslogudp" : { ... },
+		"syslogtcp" : { ... },
+		"redis" : { ... },
+		"file" : { ... }
+	},
+
+	"flows" : [
+		{
+			"id":"flow1",
+			"from":"file1",
+			"transporters": ["syslogudp","syslogtcp","redis","file"]
+		},
+		{
+			"id":"flow2",
+			"from":"file2",
+			"transporters": ["syslogudp","syslogtcp","redis","file"]
+		}
+	]
+}
+```
+
+Tenemos dos flujos que deben referenciar los mismos transportes; cualquier cambio en uno, afecta también al otro. Parece más sencillo y mantenible crear un grupo:
+```json
+{
+	"transporters" : {
+		"syslogudp" : { ... },
+		"syslogtcp" : { ... },
+		"redis" : { ... },
+		"file" : { ... }
+	},
+
+	"transporterGroups" : {
+		"network" : {
+			"mode" : "parallel",
+			"transporters" : ["syslogudp","syslogtcp","redis"]
+		}
+	},
+
+	"flows" : [
+		{
+			"id":"flow1",
+			"from":"file1",
+			"transporters": ["$network","file"]
+		},
+		{
+			"id":"flow2",
+			"from":"file2",
+			"transporters": ["$network","file"]
+		}
+	]
+}
+```
+
+Los grupos son referenciados por su ID, precedido del símbolo **&dollar;** (como **$network**, en este caso concreto).
+
+A diferencia de los grupos de procesadores, los transporters añaden un nuevo parámetro, **mode**, el cual define el comportamiento del grupo. Puede tomar dos valores:
+* **serial**: Los transportes son ejecutados en serie, uno detrás de otro en el mismo orden en que han sido declarados en el grupo.
+* **parallel**: Los transportes son ejecutados de forma simultánea en paralelo.
+
+Para obtener información más detallada sobre transportes, puedes acceder a su [apartado correspondiente](../transporters/index.md)
